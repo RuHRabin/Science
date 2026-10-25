@@ -1,0 +1,14 @@
+# Elementum 3D
+
+> Free interactive 3D periodic table of all 118 confirmed chemical elements, for students, teachers, enthusiasts and researchers.
+
+Elementum 3D shows each element with its atomic number, symbol, name, standard atomic mass, category, group, period, block, electron shells and a Bohr model. The page also contains a plain-text FAQ and a full data table of all 118 elements.
+
+Page: https://rabin.ruhrbin.site/Science/Chemistry/periodic-table/
+
+## Key facts
+- 118 elements, atomic numbers 1 (hydrogen) to 118 (oganesson)
+- Layouts: table, sphere, helix, rings
+- Colour modes: category, s/p/d/f block, stability
+- Every element has a link such as #Fe (iron)
+- Atomic masses follow IUPAC abridged standard atomic weights; bracketed values are the mass number of the longest-lived isotope
