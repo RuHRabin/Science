@@ -1,118 +1,335 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-07oLUIq+h9sIOMiXKJFqxZ7g8hkTNBO6Jev8Q4x4W1Y=' 'sha256-/GLjtLeuAvpJN+lJ1scrPepDy0CX+i+/Klt+vU4pfJ8=' https://cdn.jsdelivr.net/npm/three@0.128.0/; style-src 'sha256-a5c/EE4PX89jlh6k+Hkzuok6yJtsu+tIoiACZP46rME='; img-src 'self' data:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#080a10">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080a10'/%3E%3Cg fill='none' stroke='%237dd3fc' stroke-width='3'%3E%3Cellipse cx='32' cy='32' rx='24' ry='10'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='10' transform='rotate(60 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='10' transform='rotate(120 32 32)'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='5' fill='%2338bdf8'/%3E%3C/svg%3E">
-<title>Elementum 3D | Periodic Table</title>
+<title>Interactive 3D Periodic Table of the 118 Elements | Elementum 3D</title>
+<meta name="description" content="Free interactive 3D periodic table of all 118 elements. Search, filter and explore atomic mass, groups, periods and electron shells with a Bohr model for each.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#14110e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elementum 3D">
+<meta property="og:title" content="Interactive 3D Periodic Table of the 118 Elements">
+<meta property="og:description" content="Free interactive 3D periodic table of all 118 elements. Search, filter and explore atomic mass, groups, periods and electron shells with a Bohr model for each.">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Interactive 3D Periodic Table of the 118 Elements">
+<meta name="twitter:description" content="Free interactive 3D periodic table of all 118 elements. Search, filter and explore atomic mass, groups, periods and electron shells with a Bohr model for each.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f4c25b'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%2317130f'%3EEl%3C/text%3E%3Ctext x='7' y='15' font-family='monospace' font-size='9' fill='%2317130f'%3E118%3C/text%3E%3C/svg%3E">
+<script>(function(){if(location.origin==="null")return;var u=location.origin+location.pathname,l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["WebApplication","LearningResource"],"name":"Elementum 3D","alternateName":"Elementum 3D interactive periodic table","description":"Free interactive 3D periodic table of all 118 elements. Search, filter and explore atomic mass, groups, periods and electron shells with a Bohr model for each.","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser with WebGL","isAccessibleForFree":true,"inLanguage":"en","learningResourceType":"Interactive simulation","audience":{"@type":"EducationalAudience","educationalRole":["student","teacher","researcher"]},"about":{"@type":"Thing","name":"Periodic table of the chemical elements"},"keywords":"periodic table, 3D periodic table, chemical elements, atomic number, atomic mass, electron shells, Bohr model"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many elements are in the periodic table?","acceptedAnswer":{"@type":"Answer","text":"The periodic table has 118 confirmed elements, numbered 1 (hydrogen) to 118 (oganesson). Elements 1 to 94 occur naturally on Earth, at least in trace amounts, while elements 95 to 118 have only been made artificially in laboratories."}},{"@type":"Question","name":"What is the atomic number of an element?","acceptedAnswer":{"@type":"Answer","text":"The atomic number is the number of protons in an atom's nucleus. It defines the element: every atom with 6 protons is carbon, and in a neutral atom the atomic number also equals the number of electrons."}},{"@type":"Question","name":"What is the difference between a group and a period?","acceptedAnswer":{"@type":"Answer","text":"Groups are the 18 vertical columns, and elements in the same group tend to behave alike because their outer electrons are arranged similarly. Periods are the 7 horizontal rows. A period number usually matches the number of occupied electron shells; palladium is the well-known exception."}},{"@type":"Question","name":"Why are some atomic masses shown in square brackets?","acceptedAnswer":{"@type":"Answer","text":"Elements with no stable isotopes have no single natural average mass. For these, the bracketed value is the mass number of the isotope with the longest known half-life, for example [98] for technetium."}},{"@type":"Question","name":"What do the electron shells on each element mean?","acceptedAnswer":{"@type":"Answer","text":"They list how many electrons sit in each shell, labelled K, L, M, N, O, P and Q from the nucleus outward. This is a simplified Bohr-style picture. Modern chemistry describes electrons in orbitals, but shell counts still show why elements in a group behave alike."}},{"@type":"Question","name":"Which elements are liquid at room temperature?","acceptedAnswer":{"@type":"Answer","text":"Only two elements are liquid at standard room temperature and pressure: mercury, a metal, and bromine, a nonmetal. Gallium and caesium melt only slightly above room temperature."}},{"@type":"Question","name":"What are the lanthanides and actinides?","acceptedAnswer":{"@type":"Answer","text":"They are two rows of f-block elements, atomic numbers 57 to 71 and 89 to 103, usually drawn beneath the main table to keep it compact. In Elementum 3D they sit in their own rows below the main grid."}}]},{"@type":"ItemList","name":"The 118 chemical elements","numberOfItems":118,"itemListElement":[{"@type":"ListItem","position":1,"name":"Hydrogen (H)"},{"@type":"ListItem","position":2,"name":"Helium (He)"},{"@type":"ListItem","position":3,"name":"Lithium (Li)"},{"@type":"ListItem","position":4,"name":"Beryllium (Be)"},{"@type":"ListItem","position":5,"name":"Boron (B)"},{"@type":"ListItem","position":6,"name":"Carbon (C)"},{"@type":"ListItem","position":7,"name":"Nitrogen (N)"},{"@type":"ListItem","position":8,"name":"Oxygen (O)"},{"@type":"ListItem","position":9,"name":"Fluorine (F)"},{"@type":"ListItem","position":10,"name":"Neon (Ne)"},{"@type":"ListItem","position":11,"name":"Sodium (Na)"},{"@type":"ListItem","position":12,"name":"Magnesium (Mg)"},{"@type":"ListItem","position":13,"name":"Aluminium (Al)"},{"@type":"ListItem","position":14,"name":"Silicon (Si)"},{"@type":"ListItem","position":15,"name":"Phosphorus (P)"},{"@type":"ListItem","position":16,"name":"Sulfur (S)"},{"@type":"ListItem","position":17,"name":"Chlorine (Cl)"},{"@type":"ListItem","position":18,"name":"Argon (Ar)"},{"@type":"ListItem","position":19,"name":"Potassium (K)"},{"@type":"ListItem","position":20,"name":"Calcium (Ca)"},{"@type":"ListItem","position":21,"name":"Scandium (Sc)"},{"@type":"ListItem","position":22,"name":"Titanium (Ti)"},{"@type":"ListItem","position":23,"name":"Vanadium (V)"},{"@type":"ListItem","position":24,"name":"Chromium (Cr)"},{"@type":"ListItem","position":25,"name":"Manganese (Mn)"},{"@type":"ListItem","position":26,"name":"Iron (Fe)"},{"@type":"ListItem","position":27,"name":"Cobalt (Co)"},{"@type":"ListItem","position":28,"name":"Nickel (Ni)"},{"@type":"ListItem","position":29,"name":"Copper (Cu)"},{"@type":"ListItem","position":30,"name":"Zinc (Zn)"},{"@type":"ListItem","position":31,"name":"Gallium (Ga)"},{"@type":"ListItem","position":32,"name":"Germanium (Ge)"},{"@type":"ListItem","position":33,"name":"Arsenic (As)"},{"@type":"ListItem","position":34,"name":"Selenium (Se)"},{"@type":"ListItem","position":35,"name":"Bromine (Br)"},{"@type":"ListItem","position":36,"name":"Krypton (Kr)"},{"@type":"ListItem","position":37,"name":"Rubidium (Rb)"},{"@type":"ListItem","position":38,"name":"Strontium (Sr)"},{"@type":"ListItem","position":39,"name":"Yttrium (Y)"},{"@type":"ListItem","position":40,"name":"Zirconium (Zr)"},{"@type":"ListItem","position":41,"name":"Niobium (Nb)"},{"@type":"ListItem","position":42,"name":"Molybdenum (Mo)"},{"@type":"ListItem","position":43,"name":"Technetium (Tc)"},{"@type":"ListItem","position":44,"name":"Ruthenium (Ru)"},{"@type":"ListItem","position":45,"name":"Rhodium (Rh)"},{"@type":"ListItem","position":46,"name":"Palladium (Pd)"},{"@type":"ListItem","position":47,"name":"Silver (Ag)"},{"@type":"ListItem","position":48,"name":"Cadmium (Cd)"},{"@type":"ListItem","position":49,"name":"Indium (In)"},{"@type":"ListItem","position":50,"name":"Tin (Sn)"},{"@type":"ListItem","position":51,"name":"Antimony (Sb)"},{"@type":"ListItem","position":52,"name":"Tellurium (Te)"},{"@type":"ListItem","position":53,"name":"Iodine (I)"},{"@type":"ListItem","position":54,"name":"Xenon (Xe)"},{"@type":"ListItem","position":55,"name":"Caesium (Cs)"},{"@type":"ListItem","position":56,"name":"Barium (Ba)"},{"@type":"ListItem","position":57,"name":"Lanthanum (La)"},{"@type":"ListItem","position":58,"name":"Cerium (Ce)"},{"@type":"ListItem","position":59,"name":"Praseodymium (Pr)"},{"@type":"ListItem","position":60,"name":"Neodymium (Nd)"},{"@type":"ListItem","position":61,"name":"Promethium (Pm)"},{"@type":"ListItem","position":62,"name":"Samarium (Sm)"},{"@type":"ListItem","position":63,"name":"Europium (Eu)"},{"@type":"ListItem","position":64,"name":"Gadolinium (Gd)"},{"@type":"ListItem","position":65,"name":"Terbium (Tb)"},{"@type":"ListItem","position":66,"name":"Dysprosium (Dy)"},{"@type":"ListItem","position":67,"name":"Holmium (Ho)"},{"@type":"ListItem","position":68,"name":"Erbium (Er)"},{"@type":"ListItem","position":69,"name":"Thulium (Tm)"},{"@type":"ListItem","position":70,"name":"Ytterbium (Yb)"},{"@type":"ListItem","position":71,"name":"Lutetium (Lu)"},{"@type":"ListItem","position":72,"name":"Hafnium (Hf)"},{"@type":"ListItem","position":73,"name":"Tantalum (Ta)"},{"@type":"ListItem","position":74,"name":"Tungsten (W)"},{"@type":"ListItem","position":75,"name":"Rhenium (Re)"},{"@type":"ListItem","position":76,"name":"Osmium (Os)"},{"@type":"ListItem","position":77,"name":"Iridium (Ir)"},{"@type":"ListItem","position":78,"name":"Platinum (Pt)"},{"@type":"ListItem","position":79,"name":"Gold (Au)"},{"@type":"ListItem","position":80,"name":"Mercury (Hg)"},{"@type":"ListItem","position":81,"name":"Thallium (Tl)"},{"@type":"ListItem","position":82,"name":"Lead (Pb)"},{"@type":"ListItem","position":83,"name":"Bismuth (Bi)"},{"@type":"ListItem","position":84,"name":"Polonium (Po)"},{"@type":"ListItem","position":85,"name":"Astatine (At)"},{"@type":"ListItem","position":86,"name":"Radon (Rn)"},{"@type":"ListItem","position":87,"name":"Francium (Fr)"},{"@type":"ListItem","position":88,"name":"Radium (Ra)"},{"@type":"ListItem","position":89,"name":"Actinium (Ac)"},{"@type":"ListItem","position":90,"name":"Thorium (Th)"},{"@type":"ListItem","position":91,"name":"Protactinium (Pa)"},{"@type":"ListItem","position":92,"name":"Uranium (U)"},{"@type":"ListItem","position":93,"name":"Neptunium (Np)"},{"@type":"ListItem","position":94,"name":"Plutonium (Pu)"},{"@type":"ListItem","position":95,"name":"Americium (Am)"},{"@type":"ListItem","position":96,"name":"Curium (Cm)"},{"@type":"ListItem","position":97,"name":"Berkelium (Bk)"},{"@type":"ListItem","position":98,"name":"Californium (Cf)"},{"@type":"ListItem","position":99,"name":"Einsteinium (Es)"},{"@type":"ListItem","position":100,"name":"Fermium (Fm)"},{"@type":"ListItem","position":101,"name":"Mendelevium (Md)"},{"@type":"ListItem","position":102,"name":"Nobelium (No)"},{"@type":"ListItem","position":103,"name":"Lawrencium (Lr)"},{"@type":"ListItem","position":104,"name":"Rutherfordium (Rf)"},{"@type":"ListItem","position":105,"name":"Dubnium (Db)"},{"@type":"ListItem","position":106,"name":"Seaborgium (Sg)"},{"@type":"ListItem","position":107,"name":"Bohrium (Bh)"},{"@type":"ListItem","position":108,"name":"Hassium (Hs)"},{"@type":"ListItem","position":109,"name":"Meitnerium (Mt)"},{"@type":"ListItem","position":110,"name":"Darmstadtium (Ds)"},{"@type":"ListItem","position":111,"name":"Roentgenium (Rg)"},{"@type":"ListItem","position":112,"name":"Copernicium (Cn)"},{"@type":"ListItem","position":113,"name":"Nihonium (Nh)"},{"@type":"ListItem","position":114,"name":"Flerovium (Fl)"},{"@type":"ListItem","position":115,"name":"Moscovium (Mc)"},{"@type":"ListItem","position":116,"name":"Livermorium (Lv)"},{"@type":"ListItem","position":117,"name":"Tennessine (Ts)"},{"@type":"ListItem","position":118,"name":"Oganesson (Og)"}]}]}</script>
 <style>
-:root{--bg:#080a10;--panel:rgba(15,23,42,.78);--line:rgba(148,163,184,.18);--text:#f8fafc;--muted:#94a3b8;--ec:#38bdf8;
+:root{--bg:#14110e;--paper:#efe8da;--ink:#17130f;--panel:#1d1915;--panel2:#292319;--line:#3b342b;--muted:#a79f90;--accent:#f4c25b;--ec:#f4c25b;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
 --sat:env(safe-area-inset-top,0px);--sab:env(safe-area-inset-bottom,0px);--sal:env(safe-area-inset-left,0px);--sar:env(safe-area-inset-right,0px)}
-*{box-sizing:border-box}html{color-scheme:dark}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:dark;background:var(--bg);scroll-behavior:smooth}
+html.lock,html.lock body{overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--paper);font-family:var(--sans);line-height:1.6}
+a{color:var(--accent)}
 button,input{font:inherit;color:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 canvas{display:block;touch-action:none}
-.glass{background:var(--panel);border:1px solid var(--line);box-shadow:0 18px 60px #0006,inset 0 1px #fff1;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
-#scene{position:fixed;inset:0}
-.hud{position:fixed;z-index:10;top:calc(14px + var(--sat));left:calc(14px + var(--sal));right:calc(14px + var(--sar));display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;z-index:100;background:var(--accent);color:var(--ink);padding:8px 12px;border-radius:4px;font-weight:700}.skip:focus{top:8px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px}
+.app{position:relative;height:100vh;height:100dvh;overflow:hidden}
+#scene{position:absolute;inset:0}
+.hud{position:absolute;z-index:10;top:calc(12px + var(--sat));left:calc(12px + var(--sal));right:calc(12px + var(--sar));display:flex;flex-direction:column;gap:8px;pointer-events:none}
 .hud>*{pointer-events:auto}
-.top{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:16px}
-.brand{display:flex;align-items:center;gap:9px;min-width:0}
-.mark{flex:none;width:32px;height:32px;border:1px solid #38bdf8;border-radius:50%;position:relative;box-shadow:0 0 22px #38bdf855}
-.mark:before,.mark:after{content:"";position:absolute;inset:6px;border:1px solid #7dd3fc;border-radius:50%;transform:rotate(55deg)}
-.mark:after{transform:rotate(-55deg)}
-.brand div{min-width:0}
-h1{font-size:13px;line-height:1;margin:0;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.brand p{font-size:9px;margin:4px 0 0;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-.search{flex:1;min-width:0;max-width:390px;position:relative}
-.search input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line);outline:0;background:#02061788;color:#fff;padding:0 36px 0 13px;font-size:16px}
-.search input:focus{border-color:#38bdf899;box-shadow:0 0 0 3px #38bdf81a}
-.search span{position:absolute;right:12px;top:9px;color:#64748b;pointer-events:none}
-.seg{display:flex;gap:3px;border:1px solid var(--line);background:#02061788;padding:4px;border-radius:11px}
-.seg button,.btn{border:0;background:transparent;color:#94a3b8;height:32px;border-radius:7px;padding:0 10px;text-transform:uppercase;font-size:10px;font-weight:750;letter-spacing:.07em;white-space:nowrap}
-.seg button:hover,.btn:hover{color:#fff;background:#94a3b81a}
-.seg button[aria-pressed=true]{color:#061019;background:#7dd3fc;box-shadow:0 4px 16px #38bdf844}
-.actions{display:flex;gap:6px}
-.btn{height:40px;border:1px solid var(--line);font-size:11px;min-width:40px}
-.btn[aria-pressed=true]{color:#fff;border-color:#38bdf8aa}
-.filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:10px 12px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.logo{position:relative;flex:none;width:38px;height:38px;border-radius:5px;background:var(--accent);color:var(--ink);font:700 19px/38px var(--serif);text-align:center}
+.logo:before{content:"118";position:absolute;left:4px;top:3px;font:600 7px/1 var(--mono)}
+h1{margin:0;font:600 21px/1.05 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+h1 small{display:block;margin-top:4px;font:500 11px var(--mono);color:var(--muted);letter-spacing:0}
+.search{position:relative;flex:1 1 220px;min-width:0;max-width:380px}
+.search input{width:100%;height:40px;border-radius:5px;border:1px solid var(--line);outline:0;background:var(--bg);padding:0 36px 0 12px;font-size:16px}
+.search input:focus{border-color:var(--accent)}
+.search .mag{position:absolute;right:12px;top:8px;color:var(--muted);pointer-events:none}
+.ctl{display:flex;align-items:center;gap:8px}
+.lab{font:500 11px var(--mono);color:var(--muted)}
+.seg{display:flex;flex:none;gap:2px;padding:3px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+.seg button{border:0;background:none;color:var(--muted);height:30px;padding:0 11px;border-radius:4px;font-size:13px;font-weight:600;white-space:nowrap}
+.seg button:hover{color:var(--paper)}
+.seg button[aria-pressed=true]{background:var(--paper);color:var(--ink)}
+.actions{display:flex;gap:6px;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:38px;min-width:38px;padding:0 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel2);color:var(--paper);font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--accent)}.btn[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.filters{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0}
 .filters::-webkit-scrollbar{display:none}
-.chip{flex:none;border:1px solid var(--line);border-radius:99px;background:#080a10cc;color:#94a3b8;padding:8px 11px;font-size:10px;font-weight:700;letter-spacing:.03em;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-.chip:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;background:var(--c,#e2e8f0);box-shadow:0 0 8px var(--c,#e2e8f0)}
-.chip[aria-pressed=true]{color:#fff;border-color:var(--c,#e2e8f0);background:#1e293be6}
-.status{position:fixed;z-index:8;bottom:calc(14px + var(--sab));left:calc(16px + var(--sal));color:#64748b;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
-.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 9px #34d399;margin-right:7px}
-.dock{position:fixed;z-index:9;bottom:calc(14px + var(--sab));right:calc(14px + var(--sar));display:flex;gap:6px}
-.dock button{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);font-size:14px}
-.hint{position:fixed;z-index:8;bottom:calc(14px + var(--sab));right:calc(160px + var(--sar));color:#64748b;font-size:9px;line-height:1.8;text-align:right;text-transform:uppercase;letter-spacing:.07em;pointer-events:none}
-.hint b{color:#cbd5e1}
-@media(max-width:680px){.hint{display:none}}
-.empty{position:fixed;z-index:7;display:none;left:50%;top:54%;transform:translate(-50%,-50%);text-align:center;color:#64748b;padding:0 20px}
-.empty strong{font-size:60px;color:#293548;display:block}
-.modal{position:fixed;z-index:30;inset:0;display:none;justify-content:flex-end;background:#020617aa;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.filters .seg{background:var(--panel)}
+.rule{flex:none;width:1px;height:22px;background:var(--line)}
+.chips{display:flex;gap:6px}
+.chip{flex:none;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--muted);padding:7px 10px;font-size:12px;font-weight:600}
+.chip:before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:7px;background:var(--c)}
+.chip[aria-pressed=true]{color:var(--paper);border-color:var(--c);background:var(--panel2)}
+.status{position:absolute;z-index:8;bottom:calc(16px + var(--sab));left:calc(16px + var(--sal));color:var(--muted);font:11px var(--mono)}
+.dock{position:absolute;z-index:9;bottom:calc(12px + var(--sab));right:calc(12px + var(--sar));display:flex;gap:6px}
+.dock .btn{width:40px;height:40px;padding:0;font-size:18px}
+.hint{position:absolute;z-index:8;bottom:calc(14px + var(--sab));right:calc(205px + var(--sar));color:var(--muted);font:11px/1.8 var(--mono);text-align:right;pointer-events:none}
+.hint b{color:var(--paper);font-weight:600}
+.empty{position:absolute;z-index:7;display:none;left:50%;top:54%;transform:translate(-50%,-50%);text-align:center;color:var(--muted);padding:0 20px}
+.empty strong{font:600 56px var(--serif);color:var(--line);display:block}
+.modal{position:fixed;z-index:30;inset:0;display:none;justify-content:flex-end;background:#0a0806b3}
 .modal.open{display:flex}
-.viewer{width:min(100%,900px);height:100%;display:grid;grid-template-columns:minmax(0,1fr) 330px;background:#080a10;border-left:1px solid var(--line);box-shadow:-40px 0 100px #0009}
-.stage{position:relative;min-width:0;overflow:hidden;background:radial-gradient(circle at 50% 45%,#10243a,#080a10 58%,#05070b)}
+.viewer{width:min(100%,920px);height:100%;display:grid;grid-template-columns:minmax(0,1fr) 340px;background:var(--bg);border-left:1px solid var(--line)}
+.stage{position:relative;min-width:0;overflow:hidden;background:radial-gradient(circle at 50% 45%,#2b2419,var(--bg) 68%)}
 #atomCanvas{position:absolute;inset:0}
 #atomCanvas canvas{width:100%;height:100%}
-.stage-label,.stage-help{position:absolute;left:18px;color:#64748b;font-size:9px;text-transform:uppercase;letter-spacing:.14em;pointer-events:none}
-.stage-label{top:calc(18px + var(--sat))}.stage-help{bottom:18px;line-height:1.8}
-.nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#02061799;font-size:16px}
+.stage-label,.stage-help{position:absolute;left:18px;color:var(--muted);font:11px var(--mono);pointer-events:none}
+.stage-label{top:calc(18px + var(--sat))}.stage-help{bottom:18px}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:5px;border:1px solid var(--line);background:var(--panel);font-size:20px}
+.nav:hover{border-color:var(--accent)}
 #pv{left:16px}#nx{right:16px}
-.details{--ec:#38bdf8;padding:20px 20px calc(20px + var(--sab));overflow:auto;border-left:1px solid var(--line);background:#0f172abf;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
-.close{float:right;width:36px;height:36px;border-radius:9px;border:1px solid var(--line);background:#02061788;color:#94a3b8;font-size:19px}
-.close:hover{color:#fff}
-.anum{margin-top:4px;color:#64748b;font-size:10px;text-transform:uppercase;letter-spacing:.14em}
-.sym{font-size:min(82px,16vw);line-height:.95;margin:22px 0 8px;font-weight:850;letter-spacing:-.06em;color:#fff;text-shadow:0 0 40px var(--ec)}
-.ename{font-size:23px;margin:0}
-.cat{display:flex;align-items:center;gap:7px;color:var(--ec);font-size:9px;text-transform:uppercase;letter-spacing:.12em;margin-top:9px}
-.cat:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ec);box-shadow:0 0 9px var(--ec)}
-.summary{font-size:13px;line-height:1.7;color:#aebed2;margin:18px 0}
+.details{padding:20px 22px calc(22px + var(--sab));overflow:auto;border-left:1px solid var(--line);background:var(--panel)}
+.close{float:right;width:38px;height:38px;border-radius:5px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:20px}
+.close:hover{color:var(--paper);border-color:var(--accent)}
+.anum{margin:6px 0 0;color:var(--muted);font:12px var(--mono)}
+.sym{font:600 min(104px,18vw)/.95 var(--serif);margin:20px 0 6px;color:var(--ec)}
+.ename{font:600 28px/1.15 var(--serif);margin:0}
+.cat{display:flex;align-items:center;gap:8px;color:var(--ec);font:600 12px var(--mono);margin:10px 0 0}
+.cat:before{content:"";width:10px;height:10px;border-radius:2px;background:var(--ec)}
+.summary{font-size:15px;line-height:1.7;color:#d3cbbb;margin:18px 0}
 .data{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.datum{padding:10px 11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.datum span,.shell-title{display:block;color:#64748b;font-size:8px;text-transform:uppercase;letter-spacing:.14em;margin-bottom:5px}
-.datum b{font-size:12px}.shell-title{margin:18px 0 8px}
-.shells{display:flex;flex-wrap:wrap;gap:5px}
-.shell{border:1px solid color-mix(in srgb,var(--ec) 40%,transparent);background:color-mix(in srgb,var(--ec) 9%,transparent);color:var(--ec);border-radius:7px;padding:7px 8px;font-size:10px;font-weight:700}
+.datum{padding:10px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.datum span,.shell-title{display:block;color:var(--muted);font:11px var(--mono);margin-bottom:3px}
+.datum b{font-size:15px}.shell-title{margin:20px 0 8px}
+.shells{display:flex;flex-wrap:wrap;gap:6px}
+.shell{border:1px solid var(--line);background:var(--bg);color:var(--paper);border-radius:4px;padding:6px 9px;font:600 12px var(--mono)}
 .vcontrols{display:flex;gap:6px;margin-top:20px}
-.vcontrols button{flex:1;height:38px;border:1px solid var(--line);border-radius:9px;background:#02061788;color:#cbd5e1;text-transform:uppercase;font-size:9px;font-weight:700}
-.vcontrols button:hover,.vcontrols button[aria-pressed=true]{border-color:var(--ec);background:color-mix(in srgb,var(--ec) 12%,transparent)}
-@media(max-width:800px){.brand p{display:none}.top{flex-wrap:wrap}.search{order:3;max-width:none;flex-basis:100%}.viewer{grid-template-columns:1fr 285px}}
-@media(max-width:680px){.dock{bottom:calc(66px + var(--sab))}.status{bottom:calc(18px + var(--sab));left:50%;transform:translateX(-50%)}}
-@media(max-width:600px){.hud{left:calc(8px + var(--sal));right:calc(8px + var(--sar))}.top{padding:8px}.seg button{font-size:8px;padding:0 7px}
-.viewer{display:block;overflow-y:auto;height:100%}.stage{height:46vh;height:46dvh;min-height:260px}.details{border-left:0;border-top:1px solid var(--line)}
-.nav{width:40px;height:40px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.vcontrols button{flex:1;height:38px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--paper);font-size:12px;font-weight:600}
+.vcontrols button:hover,.vcontrols button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.guide{max-width:980px;margin:0 auto;padding:72px 20px 24px;color:#d3cbbb}
+.guide h2{font:600 clamp(26px,4vw,36px)/1.15 var(--serif);color:var(--paper);margin:56px 0 14px;letter-spacing:-.01em}
+.guide>h2:first-of-type{margin-top:0}
+.guide h3{font:600 19px var(--serif);color:var(--paper);margin:28px 0 8px}
+.guide p,.guide li{font-size:16px;max-width:72ch}
+.guide ul{padding-left:20px}
+.toplink{display:inline-block;margin-bottom:28px;font:12px var(--mono)}
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:600 18px var(--serif);color:var(--paper)}
+details p{margin:10px 0 0}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;margin-top:14px}
+table{border-collapse:collapse;width:100%;min-width:1150px;font-size:14px}
+caption{text-align:left;padding:12px;color:var(--muted);font-size:13px}
+th,td{padding:8px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--panel2);font:600 12px var(--mono);color:var(--muted)}
+tbody tr:hover{background:var(--panel)}
+tbody th{font-family:var(--mono);color:var(--muted)}
+td:nth-child(2) a{font-weight:700;text-decoration:none}
+footer{max-width:980px;margin:0 auto;padding:24px 20px 56px;color:var(--muted);font:12px var(--mono)}
+.ns{position:absolute;top:40%;width:100%;text-align:center}
+.game{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border-color:var(--accent)}
+.game[hidden]{display:none}
+.game strong{display:block;font:600 17px/1.3 var(--serif)}
+.game span{font:11px var(--mono);color:var(--muted)}
+@media(max-width:800px){.search{order:5;max-width:none;flex-basis:100%}.viewer{grid-template-columns:1fr 290px}}
+@media(max-width:680px){.hint{display:none}.dock{bottom:calc(66px + var(--sab))}.status{bottom:calc(20px + var(--sab));left:50%;transform:translateX(-50%)}.lab{display:none}}
+@media(max-width:600px){.hud{left:calc(8px + var(--sal));right:calc(8px + var(--sar))}.top{padding:8px 10px}h1{font-size:18px}.logo{width:32px;height:32px;line-height:32px;font-size:16px}
+.viewer{display:block;overflow-y:auto;height:100%}.stage{height:46vh;height:46dvh;min-height:260px}.details{border-left:0;border-top:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{scroll-behavior:auto!important}}
 </style></head><body>
+<a class="skip" href="#guide">Skip to guide and data table</a>
+<section class="app" id="top" aria-label="Interactive periodic table">
 <div id="scene"></div>
 <div class="hud" id="hud">
-<header class="top glass"><div class="brand"><div class="mark"></div><div><h1>Elementum 3D</h1><p>118 elements · atomic atlas</p></div></div>
-<label class="search"><input id="search" type="search" placeholder="Search name, symbol or number" enterkeyhint="search" autocomplete="off"><span>⌕</span></label>
-<div class="seg" role="group" aria-label="Layout"><button aria-pressed="true" data-layout="grid">Table</button><button aria-pressed="false" data-layout="sphere">Sphere</button><button aria-pressed="false" data-layout="helix">Helix</button><button aria-pressed="false" data-layout="rings">Rings</button></div>
-<div class="actions"><button class="btn" id="auto" aria-pressed="false">Auto</button><button class="btn" id="reset">Reset</button></div></header>
-<nav class="filters" id="filters" aria-label="Filter by category"></nav>
+<header class="top panel"><div class="brand"><div class="logo" aria-hidden="true">El</div><h1>Elementum 3D<small>Interactive periodic table</small></h1></div>
+<label class="search"><span class="sr">Search elements</span><input id="search" type="search" placeholder="Search by name, symbol or number" enterkeyhint="search" autocomplete="off"><span class="mag" aria-hidden="true">⌕</span></label>
+<div class="ctl"><span class="lab">Layout</span><div class="seg" role="group" aria-label="Layout"><button aria-pressed="true" data-layout="grid">Table</button><button aria-pressed="false" data-layout="sphere">Sphere</button><button aria-pressed="false" data-layout="helix">Helix</button><button aria-pressed="false" data-layout="rings">Rings</button></div></div>
+<div class="actions"><button class="btn" id="auto" aria-pressed="false">Auto</button><button class="btn" id="reset">Reset</button><button class="btn" id="play" aria-pressed="false">Play</button><a class="btn" href="#guide">Guide &amp; data ↓</a></div></header>
+<nav class="filters" aria-label="Colour and filter"><div class="seg" id="modes" role="group" aria-label="Colour by"><button aria-pressed="true" data-mode="category">Category</button><button aria-pressed="false" data-mode="block">Block</button><button aria-pressed="false" data-mode="stability">Stability</button></div><span class="rule"></span><div class="chips" id="chips"></div></nav>
+<div class="game panel" id="game" hidden><div><strong id="gq" aria-live="polite"></strong><span id="gs"></span></div><button class="btn" id="gquit">Quit</button></div>
 </div>
-<div class="status" role="status"><i></i><span id="count">118 elements visible</span></div>
-<div class="dock"><button class="btn glass" id="zin" aria-label="Zoom in" style="font-size:20px">+</button><button class="btn glass" id="zout" aria-label="Zoom out" style="font-size:20px">−</button><button class="btn glass" id="rand" title="Random element" aria-label="Random element">🎲</button></div>
-<div class="hint"><b>Drag</b> move · <b>Scroll / + −</b> zoom · <b>Tap</b> inspect<br><b>Arrows</b> pan · <b>Shift+Arrows</b> rotate · <b>G/S/H/R</b> layout · <b>0</b> reset</div>
+<div class="status" role="status"><span id="count">118 elements visible</span></div>
+<div class="dock"><button class="btn" id="zin" aria-label="Zoom in">+</button><button class="btn" id="zout" aria-label="Zoom out">−</button><button class="btn" id="burst" title="Scatter the cards (B)" aria-label="Scatter the cards">✦</button><button class="btn" id="rand" title="Random element" aria-label="Random element">⚄</button></div>
+<div class="hint"><b>Drag</b> move · <b>Scroll / + −</b> zoom · <b>Tap</b> inspect<br><b>Arrows</b> pan · <b>Shift+Arrows</b> rotate · <b>G S H R</b> layout · <b>B</b> burst · <b>P</b> play · <b>0</b> reset</div>
 <div class="empty" id="empty"><strong>∅</strong>No elements found</div>
+<noscript><p class="ns">The 3D table needs JavaScript and WebGL. The full element data is listed below.</p></noscript>
+</section>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Element detail"><div class="viewer">
-<section class="stage"><div id="atomCanvas"></div><div class="stage-label">Interactive Bohr model</div><div class="stage-help">Drag to orbit · Scroll or pinch to zoom</div>
+<section class="stage"><div id="atomCanvas"></div><div class="stage-label">Bohr model</div><div class="stage-help">Drag to orbit · scroll or pinch to zoom</div>
 <button class="nav" id="pv" aria-label="Previous element">‹</button><button class="nav" id="nx" aria-label="Next element">›</button></section>
-<aside class="details" id="details"><button class="close" id="close" aria-label="Close">×</button>
-<div class="anum" id="dno"></div><div class="sym" id="dsym"></div><h2 class="ename" id="dname"></h2><div class="cat" id="dcat"></div><p class="summary" id="dsum"></p>
-<div class="data"><div class="datum"><span>Atomic mass</span><b id="dmass"></b></div><div class="datum"><span>Group</span><b id="dgroup"></b></div><div class="datum"><span>Period</span><b id="dperiod"></b></div><div class="datum"><span>Electrons</span><b id="delec"></b></div></div>
+<aside class="details" id="details" aria-live="polite"><button class="close" id="close" aria-label="Close">×</button>
+<p class="anum" id="dno"></p><div class="sym" id="dsym"></div><h2 class="ename" id="dname"></h2><p class="cat" id="dcat"></p><p class="summary" id="dsum"></p>
+<div class="data"><div class="datum"><span>Atomic mass</span><b id="dmass"></b></div><div class="datum"><span>Electrons</span><b id="delec"></b></div><div class="datum"><span>Group</span><b id="dgroup"></b></div><div class="datum"><span>Period</span><b id="dperiod"></b></div><div class="datum"><span>Block</span><b id="dblock"></b></div><div class="datum"><span>Stability</span><b id="dstab"></b></div></div>
 <div class="shell-title">Electrons per shell</div><div class="shells" id="shells"></div>
-<div class="vcontrols"><button aria-pressed="true" id="aauto">Auto rotate</button><button id="areset">Reset view</button><button id="azoom">Focus core</button></div>
+<div class="vcontrols"><button aria-pressed="true" id="aauto">Auto rotate</button><button id="areset">Reset view</button><button id="azoom">Focus core</button><button id="aexcite">Excite</button></div>
 </aside></div></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<main class="guide" id="guide">
+<a class="toplink" href="#top">↑ Back to the 3D table</a>
+<h2>An interactive periodic table you can explore in 3D</h2>
+<p>Elementum 3D is a free periodic table of all 118 confirmed chemical elements. Browse the classic table, or rearrange the same elements as a sphere, helix or set of rings. Search by name, symbol or atomic number, filter by category, block or stability, and open any element to see its atomic mass, group, period and electron shells beside an orbiting Bohr model.</p>
+<h3>Who it is for</h3>
+<ul><li><strong>Students and learners:</strong> see how groups, periods and electron shells explain chemical behaviour, and use the colour modes to revise categories and blocks.</li>
+<li><strong>Teachers:</strong> project the table, switch layouts and open the Bohr model to show how shells fill across a period.</li>
+<li><strong>Enthusiasts:</strong> wander through the elements and read a short overview of each one's uses.</li>
+<li><strong>Researchers:</strong> use the data table below as a quick reference, and cite IUPAC publications for formal work.</li></ul>
+<h3>How to use it</h3>
+<ul><li>Tap or click a card to open the element. Use the arrow buttons or the left and right arrow keys to move to the next one.</li>
+<li>Drag to move the table, scroll or press + and − to zoom, and press 0 to reset the view.</li>
+<li>Press G, S, H or R for the table, sphere, helix or rings layout, and press / to focus search.</li>
+<li>Move the pointer across the table and the cards rise toward you. Click empty space to jiggle them, press B to scatter them, and press P to play a find-the-element game. In the Bohr model, tap the atom to excite its electrons.</li>
+<li>Every element has a shareable link, for example <code>#Fe</code> for iron.</li></ul>
+<h3>Reading an element card</h3>
+<p>The number at the top left is the atomic number. The large letters are the element symbol, followed by the name and the standard atomic mass in unified atomic mass units. The number at the top right is the group; f-block elements show f instead. The card colour follows the colour mode you pick: category, s/p/d/f block, or whether the element has a stable isotope.</p>
+<h2>Periodic table FAQ</h2>
+<details><summary>How many elements are in the periodic table?</summary><p>The periodic table has 118 confirmed elements, numbered 1 (hydrogen) to 118 (oganesson). Elements 1 to 94 occur naturally on Earth, at least in trace amounts, while elements 95 to 118 have only been made artificially in laboratories.</p></details>
+<details><summary>What is the atomic number of an element?</summary><p>The atomic number is the number of protons in an atom's nucleus. It defines the element: every atom with 6 protons is carbon, and in a neutral atom the atomic number also equals the number of electrons.</p></details>
+<details><summary>What is the difference between a group and a period?</summary><p>Groups are the 18 vertical columns, and elements in the same group tend to behave alike because their outer electrons are arranged similarly. Periods are the 7 horizontal rows. A period number usually matches the number of occupied electron shells; palladium is the well-known exception.</p></details>
+<details><summary>Why are some atomic masses shown in square brackets?</summary><p>Elements with no stable isotopes have no single natural average mass. For these, the bracketed value is the mass number of the isotope with the longest known half-life, for example [98] for technetium.</p></details>
+<details><summary>What do the electron shells on each element mean?</summary><p>They list how many electrons sit in each shell, labelled K, L, M, N, O, P and Q from the nucleus outward. This is a simplified Bohr-style picture. Modern chemistry describes electrons in orbitals, but shell counts still show why elements in a group behave alike.</p></details>
+<details><summary>Which elements are liquid at room temperature?</summary><p>Only two elements are liquid at standard room temperature and pressure: mercury, a metal, and bromine, a nonmetal. Gallium and caesium melt only slightly above room temperature.</p></details>
+<details><summary>What are the lanthanides and actinides?</summary><p>They are two rows of f-block elements, atomic numbers 57 to 71 and 89 to 103, usually drawn beneath the main table to keep it compact. In Elementum 3D they sit in their own rows below the main grid.</p></details>
+
+<h2>All 118 elements in one table</h2>
+<p>This table lists every element shown in the 3D view. Select a symbol to open it in the viewer.</p>
+<div class="wrap"><table>
+<caption>Periodic table of the elements: atomic number, symbol, name, atomic mass, category, group, period, block, electrons per shell and overview</caption>
+<thead><tr><th scope="col">No.</th><th scope="col">Symbol</th><th scope="col">Name</th><th scope="col">Atomic mass (u)</th><th scope="col">Category</th><th scope="col">Group</th><th scope="col">Period</th><th scope="col">Block</th><th scope="col">Electrons per shell</th><th scope="col">Overview</th></tr></thead>
+<tbody>
+<tr><th scope="row">1</th><td><a href="#H">H</a></td><td>Hydrogen</td><td>1.008</td><td>Reactive Nonmetal</td><td>1</td><td>1</td><td>s-block</td><td>1</td><td>The lightest element, hydrogen fuels stars and forms most visible matter in the universe.</td></tr>
+<tr><th scope="row">2</th><td><a href="#He">He</a></td><td>Helium</td><td>4.0026</td><td>Noble Gas</td><td>18</td><td>1</td><td>s-block</td><td>2</td><td>An inert, low-density gas produced by stellar fusion and used in cryogenics.</td></tr>
+<tr><th scope="row">3</th><td><a href="#Li">Li</a></td><td>Lithium</td><td>6.94</td><td>Alkali Metal</td><td>1</td><td>2</td><td>s-block</td><td>2 · 1</td><td>A soft, light metal central to rechargeable batteries and psychiatric medicine.</td></tr>
+<tr><th scope="row">4</th><td><a href="#Be">Be</a></td><td>Beryllium</td><td>9.0122</td><td>Alkaline Earth Metal</td><td>2</td><td>2</td><td>s-block</td><td>2 · 2</td><td>A strong, lightweight metal valued in aerospace structures and X-ray windows.</td></tr>
+<tr><th scope="row">5</th><td><a href="#B">B</a></td><td>Boron</td><td>10.81</td><td>Metalloid</td><td>13</td><td>2</td><td>p-block</td><td>2 · 3</td><td>A hard metalloid used in borosilicate glass, detergents, and semiconductor doping.</td></tr>
+<tr><th scope="row">6</th><td><a href="#C">C</a></td><td>Carbon</td><td>12.011</td><td>Reactive Nonmetal</td><td>14</td><td>2</td><td>p-block</td><td>2 · 4</td><td>Carbon forms the molecular backbone of life and materials from graphite to diamond.</td></tr>
+<tr><th scope="row">7</th><td><a href="#N">N</a></td><td>Nitrogen</td><td>14.007</td><td>Reactive Nonmetal</td><td>15</td><td>2</td><td>p-block</td><td>2 · 5</td><td>Nitrogen dominates Earth's atmosphere and is essential to proteins and nucleic acids.</td></tr>
+<tr><th scope="row">8</th><td><a href="#O">O</a></td><td>Oxygen</td><td>15.999</td><td>Reactive Nonmetal</td><td>16</td><td>2</td><td>p-block</td><td>2 · 6</td><td>A highly reactive gas required by aerobic life and many combustion processes.</td></tr>
+<tr><th scope="row">9</th><td><a href="#F">F</a></td><td>Fluorine</td><td>18.998</td><td>Halogen</td><td>17</td><td>2</td><td>p-block</td><td>2 · 7</td><td>The most electronegative element, fluorine forms exceptionally strong chemical bonds.</td></tr>
+<tr><th scope="row">10</th><td><a href="#Ne">Ne</a></td><td>Neon</td><td>20.180</td><td>Noble Gas</td><td>18</td><td>2</td><td>p-block</td><td>2 · 8</td><td>An inert noble gas famous for its brilliant reddish-orange electrical discharge.</td></tr>
+<tr><th scope="row">11</th><td><a href="#Na">Na</a></td><td>Sodium</td><td>22.990</td><td>Alkali Metal</td><td>1</td><td>3</td><td>s-block</td><td>2 · 8 · 1</td><td>A reactive metal whose ions regulate fluids and nerve signals in living organisms.</td></tr>
+<tr><th scope="row">12</th><td><a href="#Mg">Mg</a></td><td>Magnesium</td><td>24.305</td><td>Alkaline Earth Metal</td><td>2</td><td>3</td><td>s-block</td><td>2 · 8 · 2</td><td>A light structural metal and the central atom in chlorophyll.</td></tr>
+<tr><th scope="row">13</th><td><a href="#Al">Al</a></td><td>Aluminium</td><td>26.982</td><td>Post-Transition Metal</td><td>13</td><td>3</td><td>p-block</td><td>2 · 8 · 3</td><td>A low-density, corrosion-resistant metal widely used in transport and packaging.</td></tr>
+<tr><th scope="row">14</th><td><a href="#Si">Si</a></td><td>Silicon</td><td>28.085</td><td>Metalloid</td><td>14</td><td>3</td><td>p-block</td><td>2 · 8 · 4</td><td>A semiconductor that underpins modern electronics and is abundant in silicate minerals.</td></tr>
+<tr><th scope="row">15</th><td><a href="#P">P</a></td><td>Phosphorus</td><td>30.974</td><td>Reactive Nonmetal</td><td>15</td><td>3</td><td>p-block</td><td>2 · 8 · 5</td><td>An essential biological element found in DNA, ATP, bones, and fertilizers.</td></tr>
+<tr><th scope="row">16</th><td><a href="#S">S</a></td><td>Sulfur</td><td>32.06</td><td>Reactive Nonmetal</td><td>16</td><td>3</td><td>p-block</td><td>2 · 8 · 6</td><td>A yellow nonmetal used to make sulfuric acid and vital sulfur-bearing proteins.</td></tr>
+<tr><th scope="row">17</th><td><a href="#Cl">Cl</a></td><td>Chlorine</td><td>35.45</td><td>Halogen</td><td>17</td><td>3</td><td>p-block</td><td>2 · 8 · 7</td><td>A reactive halogen used for disinfection and present in common salt.</td></tr>
+<tr><th scope="row">18</th><td><a href="#Ar">Ar</a></td><td>Argon</td><td>39.948</td><td>Noble Gas</td><td>18</td><td>3</td><td>p-block</td><td>2 · 8 · 8</td><td>An abundant inert gas used to shield welding and preserve reactive materials.</td></tr>
+<tr><th scope="row">19</th><td><a href="#K">K</a></td><td>Potassium</td><td>39.098</td><td>Alkali Metal</td><td>1</td><td>4</td><td>s-block</td><td>2 · 8 · 8 · 1</td><td>A soft reactive metal whose ions are crucial for cells, muscles, and nerves.</td></tr>
+<tr><th scope="row">20</th><td><a href="#Ca">Ca</a></td><td>Calcium</td><td>40.078</td><td>Alkaline Earth Metal</td><td>2</td><td>4</td><td>s-block</td><td>2 · 8 · 8 · 2</td><td>Calcium strengthens bones and shells and acts as a universal cellular messenger.</td></tr>
+<tr><th scope="row">21</th><td><a href="#Sc">Sc</a></td><td>Scandium</td><td>44.956</td><td>Transition Metal</td><td>3</td><td>4</td><td>d-block</td><td>2 · 8 · 9 · 2</td><td>A light transition metal used in high-performance aluminium alloys and lamps.</td></tr>
+<tr><th scope="row">22</th><td><a href="#Ti">Ti</a></td><td>Titanium</td><td>47.867</td><td>Transition Metal</td><td>4</td><td>4</td><td>d-block</td><td>2 · 8 · 10 · 2</td><td>A strong, corrosion-resistant, biocompatible metal important in aerospace and medicine.</td></tr>
+<tr><th scope="row">23</th><td><a href="#V">V</a></td><td>Vanadium</td><td>50.942</td><td>Transition Metal</td><td>5</td><td>4</td><td>d-block</td><td>2 · 8 · 11 · 2</td><td>Vanadium strengthens steel and supports catalysts and emerging flow batteries.</td></tr>
+<tr><th scope="row">24</th><td><a href="#Cr">Cr</a></td><td>Chromium</td><td>51.996</td><td>Transition Metal</td><td>6</td><td>4</td><td>d-block</td><td>2 · 8 · 13 · 1</td><td>A hard metal that gives stainless steel corrosion resistance and a bright finish.</td></tr>
+<tr><th scope="row">25</th><td><a href="#Mn">Mn</a></td><td>Manganese</td><td>54.938</td><td>Transition Metal</td><td>7</td><td>4</td><td>d-block</td><td>2 · 8 · 13 · 2</td><td>An essential alloying element for steel and a cofactor in biological enzymes.</td></tr>
+<tr><th scope="row">26</th><td><a href="#Fe">Fe</a></td><td>Iron</td><td>55.845</td><td>Transition Metal</td><td>8</td><td>4</td><td>d-block</td><td>2 · 8 · 14 · 2</td><td>Iron is the foundation of steel and carries oxygen in blood through hemoglobin.</td></tr>
+<tr><th scope="row">27</th><td><a href="#Co">Co</a></td><td>Cobalt</td><td>58.933</td><td>Transition Metal</td><td>9</td><td>4</td><td>d-block</td><td>2 · 8 · 15 · 2</td><td>A magnetic metal used in superalloys, blue pigments, batteries, and vitamin B12.</td></tr>
+<tr><th scope="row">28</th><td><a href="#Ni">Ni</a></td><td>Nickel</td><td>58.693</td><td>Transition Metal</td><td>10</td><td>4</td><td>d-block</td><td>2 · 8 · 16 · 2</td><td>A tough corrosion-resistant metal used in alloys, plating, catalysts, and batteries.</td></tr>
+<tr><th scope="row">29</th><td><a href="#Cu">Cu</a></td><td>Copper</td><td>63.546</td><td>Transition Metal</td><td>11</td><td>4</td><td>d-block</td><td>2 · 8 · 18 · 1</td><td>An excellent conductor used in electrical systems since ancient metallurgy.</td></tr>
+<tr><th scope="row">30</th><td><a href="#Zn">Zn</a></td><td>Zinc</td><td>65.38</td><td>Transition Metal</td><td>12</td><td>4</td><td>d-block</td><td>2 · 8 · 18 · 2</td><td>Zinc protects steel by galvanizing and is essential to many enzymes.</td></tr>
+<tr><th scope="row">31</th><td><a href="#Ga">Ga</a></td><td>Gallium</td><td>69.723</td><td>Post-Transition Metal</td><td>13</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 3</td><td>A low-melting metal used in compound semiconductors, LEDs, and solar cells.</td></tr>
+<tr><th scope="row">32</th><td><a href="#Ge">Ge</a></td><td>Germanium</td><td>72.630</td><td>Metalloid</td><td>14</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 4</td><td>A semiconductor metalloid used in fiber optics, infrared optics, and electronics.</td></tr>
+<tr><th scope="row">33</th><td><a href="#As">As</a></td><td>Arsenic</td><td>74.922</td><td>Metalloid</td><td>15</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 5</td><td>A toxic metalloid used in specialized semiconductors and historically in pigments.</td></tr>
+<tr><th scope="row">34</th><td><a href="#Se">Se</a></td><td>Selenium</td><td>78.971</td><td>Reactive Nonmetal</td><td>16</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 6</td><td>A photoconductive nonmetal required in trace amounts by antioxidant enzymes.</td></tr>
+<tr><th scope="row">35</th><td><a href="#Br">Br</a></td><td>Bromine</td><td>79.904</td><td>Halogen</td><td>17</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 7</td><td>The only liquid nonmetal at room temperature, used in flame retardants and chemistry.</td></tr>
+<tr><th scope="row">36</th><td><a href="#Kr">Kr</a></td><td>Krypton</td><td>83.798</td><td>Noble Gas</td><td>18</td><td>4</td><td>p-block</td><td>2 · 8 · 18 · 8</td><td>A rare inert gas used in high-performance lighting and insulating windows.</td></tr>
+<tr><th scope="row">37</th><td><a href="#Rb">Rb</a></td><td>Rubidium</td><td>85.468</td><td>Alkali Metal</td><td>1</td><td>5</td><td>s-block</td><td>2 · 8 · 18 · 8 · 1</td><td>A highly reactive metal used in research, atomic clocks, and vacuum systems.</td></tr>
+<tr><th scope="row">38</th><td><a href="#Sr">Sr</a></td><td>Strontium</td><td>87.62</td><td>Alkaline Earth Metal</td><td>2</td><td>5</td><td>s-block</td><td>2 · 8 · 18 · 8 · 2</td><td>A reactive metal whose salts produce vivid red fireworks and specialty ceramics.</td></tr>
+<tr><th scope="row">39</th><td><a href="#Y">Y</a></td><td>Yttrium</td><td>88.906</td><td>Transition Metal</td><td>3</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 9 · 2</td><td>A transition metal used in phosphors, lasers, superconductors, and tough ceramics.</td></tr>
+<tr><th scope="row">40</th><td><a href="#Zr">Zr</a></td><td>Zirconium</td><td>91.224</td><td>Transition Metal</td><td>4</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 10 · 2</td><td>A corrosion-resistant metal used in nuclear reactors, ceramics, and surgical devices.</td></tr>
+<tr><th scope="row">41</th><td><a href="#Nb">Nb</a></td><td>Niobium</td><td>92.906</td><td>Transition Metal</td><td>5</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 12 · 1</td><td>Niobium strengthens alloys and enables powerful superconducting magnets.</td></tr>
+<tr><th scope="row">42</th><td><a href="#Mo">Mo</a></td><td>Molybdenum</td><td>95.95</td><td>Transition Metal</td><td>6</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 13 · 1</td><td>A refractory metal that strengthens steel and serves essential biological catalysts.</td></tr>
+<tr><th scope="row">43</th><td><a href="#Tc">Tc</a></td><td>Technetium</td><td>[98]</td><td>Transition Metal</td><td>7</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 13 · 2</td><td>The lightest element with no stable isotopes, widely used in medical imaging.</td></tr>
+<tr><th scope="row">44</th><td><a href="#Ru">Ru</a></td><td>Ruthenium</td><td>101.07</td><td>Transition Metal</td><td>8</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 15 · 1</td><td>A rare platinum-group metal used to harden alloys and catalyze chemical reactions.</td></tr>
+<tr><th scope="row">45</th><td><a href="#Rh">Rh</a></td><td>Rhodium</td><td>102.91</td><td>Transition Metal</td><td>9</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 16 · 1</td><td>A highly reflective, corrosion-resistant metal crucial to catalytic converters.</td></tr>
+<tr><th scope="row">46</th><td><a href="#Pd">Pd</a></td><td>Palladium</td><td>106.42</td><td>Transition Metal</td><td>10</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 18</td><td>A platinum-group catalyst used in emissions control, electronics, and hydrogen systems.</td></tr>
+<tr><th scope="row">47</th><td><a href="#Ag">Ag</a></td><td>Silver</td><td>107.87</td><td>Transition Metal</td><td>11</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 18 · 1</td><td>The most electrically conductive metal, valued in electronics, mirrors, and jewelry.</td></tr>
+<tr><th scope="row">48</th><td><a href="#Cd">Cd</a></td><td>Cadmium</td><td>112.41</td><td>Transition Metal</td><td>12</td><td>5</td><td>d-block</td><td>2 · 8 · 18 · 18 · 2</td><td>A toxic soft metal formerly common in batteries, pigments, and protective coatings.</td></tr>
+<tr><th scope="row">49</th><td><a href="#In">In</a></td><td>Indium</td><td>114.82</td><td>Post-Transition Metal</td><td>13</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 3</td><td>A soft metal essential to transparent conductive coatings in touchscreens and displays.</td></tr>
+<tr><th scope="row">50</th><td><a href="#Sn">Sn</a></td><td>Tin</td><td>118.71</td><td>Post-Transition Metal</td><td>14</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 4</td><td>A corrosion-resistant metal used in solder, coatings, bronze, and organotin chemistry.</td></tr>
+<tr><th scope="row">51</th><td><a href="#Sb">Sb</a></td><td>Antimony</td><td>121.76</td><td>Metalloid</td><td>15</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 5</td><td>A brittle metalloid used in flame retardants, alloys, and semiconductor devices.</td></tr>
+<tr><th scope="row">52</th><td><a href="#Te">Te</a></td><td>Tellurium</td><td>127.60</td><td>Metalloid</td><td>16</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 6</td><td>A rare metalloid important in solar cells, thermoelectrics, and metal alloys.</td></tr>
+<tr><th scope="row">53</th><td><a href="#I">I</a></td><td>Iodine</td><td>126.90</td><td>Halogen</td><td>17</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 7</td><td>A violet halogen essential to thyroid hormones and useful as an antiseptic.</td></tr>
+<tr><th scope="row">54</th><td><a href="#Xe">Xe</a></td><td>Xenon</td><td>131.29</td><td>Noble Gas</td><td>18</td><td>5</td><td>p-block</td><td>2 · 8 · 18 · 18 · 8</td><td>A heavy noble gas used in lighting, ion propulsion, imaging, and anesthesia.</td></tr>
+<tr><th scope="row">55</th><td><a href="#Cs">Cs</a></td><td>Caesium</td><td>132.91</td><td>Alkali Metal</td><td>1</td><td>6</td><td>s-block</td><td>2 · 8 · 18 · 18 · 8 · 1</td><td>An extremely reactive metal whose atomic transition defines precise time standards.</td></tr>
+<tr><th scope="row">56</th><td><a href="#Ba">Ba</a></td><td>Barium</td><td>137.33</td><td>Alkaline Earth Metal</td><td>2</td><td>6</td><td>s-block</td><td>2 · 8 · 18 · 18 · 8 · 2</td><td>A dense reactive metal used in medical imaging contrast and green pyrotechnics.</td></tr>
+<tr><th scope="row">57</th><td><a href="#La">La</a></td><td>Lanthanum</td><td>138.91</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 18 · 9 · 2</td><td>A soft rare-earth metal used in optics, catalysts, batteries, and lighter flints.</td></tr>
+<tr><th scope="row">58</th><td><a href="#Ce">Ce</a></td><td>Cerium</td><td>140.12</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 19 · 9 · 2</td><td>The most abundant rare-earth element, used in catalysts, glass polishing, and alloys.</td></tr>
+<tr><th scope="row">59</th><td><a href="#Pr">Pr</a></td><td>Praseodymium</td><td>140.91</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 21 · 8 · 2</td><td>A rare-earth metal used in strong magnets, aircraft alloys, and colored glass.</td></tr>
+<tr><th scope="row">60</th><td><a href="#Nd">Nd</a></td><td>Neodymium</td><td>144.24</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 22 · 8 · 2</td><td>Neodymium enables exceptionally powerful permanent magnets used in motors and audio.</td></tr>
+<tr><th scope="row">61</th><td><a href="#Pm">Pm</a></td><td>Promethium</td><td>[145]</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 23 · 8 · 2</td><td>A radioactive rare-earth element used in research and specialized nuclear batteries.</td></tr>
+<tr><th scope="row">62</th><td><a href="#Sm">Sm</a></td><td>Samarium</td><td>150.36</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 24 · 8 · 2</td><td>A rare-earth metal used in heat-resistant magnets, lasers, and neutron absorption.</td></tr>
+<tr><th scope="row">63</th><td><a href="#Eu">Eu</a></td><td>Europium</td><td>151.96</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 25 · 8 · 2</td><td>A reactive rare-earth element responsible for red and blue display phosphors.</td></tr>
+<tr><th scope="row">64</th><td><a href="#Gd">Gd</a></td><td>Gadolinium</td><td>157.25</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 25 · 9 · 2</td><td>A strongly magnetic rare-earth metal used in MRI contrast and neutron capture.</td></tr>
+<tr><th scope="row">65</th><td><a href="#Tb">Tb</a></td><td>Terbium</td><td>158.93</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 27 · 8 · 2</td><td>A rare-earth element used in green phosphors, sensors, and magnetostrictive alloys.</td></tr>
+<tr><th scope="row">66</th><td><a href="#Dy">Dy</a></td><td>Dysprosium</td><td>162.50</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 28 · 8 · 2</td><td>Dysprosium improves high-temperature permanent magnets and absorbs thermal neutrons.</td></tr>
+<tr><th scope="row">67</th><td><a href="#Ho">Ho</a></td><td>Holmium</td><td>164.93</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 29 · 8 · 2</td><td>A rare-earth element with an exceptional magnetic moment, used in lasers and magnets.</td></tr>
+<tr><th scope="row">68</th><td><a href="#Er">Er</a></td><td>Erbium</td><td>167.26</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 30 · 8 · 2</td><td>Erbium amplifies optical-fiber signals and imparts a pink color to glass.</td></tr>
+<tr><th scope="row">69</th><td><a href="#Tm">Tm</a></td><td>Thulium</td><td>168.93</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 31 · 8 · 2</td><td>The rarest stable lanthanide, used in portable X-ray sources and specialty lasers.</td></tr>
+<tr><th scope="row">70</th><td><a href="#Yb">Yb</a></td><td>Ytterbium</td><td>173.05</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 8 · 2</td><td>A soft rare-earth metal used in fiber lasers, alloys, and precision atomic clocks.</td></tr>
+<tr><th scope="row">71</th><td><a href="#Lu">Lu</a></td><td>Lutetium</td><td>174.97</td><td>Lanthanide</td><td>—</td><td>6 (lanthanide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 9 · 2</td><td>A dense rare-earth metal used in PET detector crystals and petroleum catalysts.</td></tr>
+<tr><th scope="row">72</th><td><a href="#Hf">Hf</a></td><td>Hafnium</td><td>178.49</td><td>Transition Metal</td><td>4</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 10 · 2</td><td>A heat-resistant metal used in reactor control rods and advanced microelectronics.</td></tr>
+<tr><th scope="row">73</th><td><a href="#Ta">Ta</a></td><td>Tantalum</td><td>180.95</td><td>Transition Metal</td><td>5</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 11 · 2</td><td>An exceptionally corrosion-resistant metal used in capacitors and surgical implants.</td></tr>
+<tr><th scope="row">74</th><td><a href="#W">W</a></td><td>Tungsten</td><td>183.84</td><td>Transition Metal</td><td>6</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 12 · 2</td><td>The metal with the highest melting point, used in hard tools and hot components.</td></tr>
+<tr><th scope="row">75</th><td><a href="#Re">Re</a></td><td>Rhenium</td><td>186.21</td><td>Transition Metal</td><td>7</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 13 · 2</td><td>A very rare refractory metal that strengthens turbine superalloys and catalysts.</td></tr>
+<tr><th scope="row">76</th><td><a href="#Os">Os</a></td><td>Osmium</td><td>190.23</td><td>Transition Metal</td><td>8</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 14 · 2</td><td>One of the densest elements, osmium is used in durable alloys and catalysts.</td></tr>
+<tr><th scope="row">77</th><td><a href="#Ir">Ir</a></td><td>Iridium</td><td>192.22</td><td>Transition Metal</td><td>9</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 15 · 2</td><td>An extremely corrosion-resistant metal used in spark plugs, crucibles, and standards.</td></tr>
+<tr><th scope="row">78</th><td><a href="#Pt">Pt</a></td><td>Platinum</td><td>195.08</td><td>Transition Metal</td><td>10</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 17 · 1</td><td>A precious, chemically stable catalyst used in medicine, industry, and jewelry.</td></tr>
+<tr><th scope="row">79</th><td><a href="#Au">Au</a></td><td>Gold</td><td>196.97</td><td>Transition Metal</td><td>11</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 18 · 1</td><td>A dense, unreactive, conductive metal prized for electronics, currency, and ornament.</td></tr>
+<tr><th scope="row">80</th><td><a href="#Hg">Hg</a></td><td>Mercury</td><td>200.59</td><td>Transition Metal</td><td>12</td><td>6</td><td>d-block</td><td>2 · 8 · 18 · 32 · 18 · 2</td><td>The only metallic element liquid at room temperature, mercury is toxic and volatile.</td></tr>
+<tr><th scope="row">81</th><td><a href="#Tl">Tl</a></td><td>Thallium</td><td>204.38</td><td>Post-Transition Metal</td><td>13</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 3</td><td>A soft, toxic metal used in specialized electronics, optics, and medical isotopes.</td></tr>
+<tr><th scope="row">82</th><td><a href="#Pb">Pb</a></td><td>Lead</td><td>207.2</td><td>Post-Transition Metal</td><td>14</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 4</td><td>A dense, soft metal used in batteries and shielding but hazardous to health.</td></tr>
+<tr><th scope="row">83</th><td><a href="#Bi">Bi</a></td><td>Bismuth</td><td>208.98</td><td>Post-Transition Metal</td><td>15</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 5</td><td>A heavy, low-toxicity metal used in medicines, cosmetics, and low-melting alloys.</td></tr>
+<tr><th scope="row">84</th><td><a href="#Po">Po</a></td><td>Polonium</td><td>[209]</td><td>Post-Transition Metal</td><td>16</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 6</td><td>A highly radioactive element discovered by Marie Curie and used in heat sources.</td></tr>
+<tr><th scope="row">85</th><td><a href="#At">At</a></td><td>Astatine</td><td>[210]</td><td>Halogen</td><td>17</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 7</td><td>An extremely rare radioactive halogen studied for targeted alpha cancer therapy.</td></tr>
+<tr><th scope="row">86</th><td><a href="#Rn">Rn</a></td><td>Radon</td><td>[222]</td><td>Noble Gas</td><td>18</td><td>6</td><td>p-block</td><td>2 · 8 · 18 · 32 · 18 · 8</td><td>A radioactive noble gas produced by radium decay and a significant indoor hazard.</td></tr>
+<tr><th scope="row">87</th><td><a href="#Fr">Fr</a></td><td>Francium</td><td>[223]</td><td>Alkali Metal</td><td>1</td><td>7</td><td>s-block</td><td>2 · 8 · 18 · 32 · 18 · 8 · 1</td><td>An extraordinarily rare, short-lived radioactive alkali metal found in uranium ores.</td></tr>
+<tr><th scope="row">88</th><td><a href="#Ra">Ra</a></td><td>Radium</td><td>[226]</td><td>Alkaline Earth Metal</td><td>2</td><td>7</td><td>s-block</td><td>2 · 8 · 18 · 32 · 18 · 8 · 2</td><td>A luminous radioactive metal historically used in paints and early radiation medicine.</td></tr>
+<tr><th scope="row">89</th><td><a href="#Ac">Ac</a></td><td>Actinium</td><td>[227]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 18 · 9 · 2</td><td>A strongly radioactive metal that begins the actinide series and emits blue light.</td></tr>
+<tr><th scope="row">90</th><td><a href="#Th">Th</a></td><td>Thorium</td><td>232.04</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 18 · 10 · 2</td><td>A naturally radioactive metal investigated as an abundant alternative nuclear fuel.</td></tr>
+<tr><th scope="row">91</th><td><a href="#Pa">Pa</a></td><td>Protactinium</td><td>231.04</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 20 · 9 · 2</td><td>A rare, toxic radioactive actinide occurring in uranium decay chains.</td></tr>
+<tr><th scope="row">92</th><td><a href="#U">U</a></td><td>Uranium</td><td>238.03</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 21 · 9 · 2</td><td>A dense radioactive metal that powers nuclear reactors and occurs naturally in rock.</td></tr>
+<tr><th scope="row">93</th><td><a href="#Np">Np</a></td><td>Neptunium</td><td>[237]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 22 · 9 · 2</td><td>A synthetic radioactive actinide produced in reactors and used in neutron detectors.</td></tr>
+<tr><th scope="row">94</th><td><a href="#Pu">Pu</a></td><td>Plutonium</td><td>[244]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 24 · 8 · 2</td><td>A radioactive actinide used in nuclear energy, weapons, and deep-space power systems.</td></tr>
+<tr><th scope="row">95</th><td><a href="#Am">Am</a></td><td>Americium</td><td>[243]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 25 · 8 · 2</td><td>A synthetic actinide best known as the source in ionization smoke detectors.</td></tr>
+<tr><th scope="row">96</th><td><a href="#Cm">Cm</a></td><td>Curium</td><td>[247]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 25 · 9 · 2</td><td>A synthetic radioactive metal used mainly in research and space-power studies.</td></tr>
+<tr><th scope="row">97</th><td><a href="#Bk">Bk</a></td><td>Berkelium</td><td>[247]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 27 · 8 · 2</td><td>A synthetic actinide produced in minute quantities for heavy-element research.</td></tr>
+<tr><th scope="row">98</th><td><a href="#Cf">Cf</a></td><td>Californium</td><td>[251]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 28 · 8 · 2</td><td>A potent synthetic neutron source used in reactor startup, analysis, and medicine.</td></tr>
+<tr><th scope="row">99</th><td><a href="#Es">Es</a></td><td>Einsteinium</td><td>[252]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 29 · 8 · 2</td><td>A synthetic actinide first identified in debris from a thermonuclear test.</td></tr>
+<tr><th scope="row">100</th><td><a href="#Fm">Fm</a></td><td>Fermium</td><td>[257]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 30 · 8 · 2</td><td>A short-lived synthetic element studied only in microscopic quantities.</td></tr>
+<tr><th scope="row">101</th><td><a href="#Md">Md</a></td><td>Mendelevium</td><td>[258]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 31 · 8 · 2</td><td>A synthetic actinide named for periodic-table pioneer Dmitri Mendeleev.</td></tr>
+<tr><th scope="row">102</th><td><a href="#No">No</a></td><td>Nobelium</td><td>[259]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 32 · 8 · 2</td><td>A synthetic radioactive element named for Alfred Nobel and studied atom by atom.</td></tr>
+<tr><th scope="row">103</th><td><a href="#Lr">Lr</a></td><td>Lawrencium</td><td>[266]</td><td>Actinide</td><td>—</td><td>7 (actinide)</td><td>f-block</td><td>2 · 8 · 18 · 32 · 32 · 8 · 3</td><td>The final actinide is a short-lived synthetic element made in accelerators.</td></tr>
+<tr><th scope="row">104</th><td><a href="#Rf">Rf</a></td><td>Rutherfordium</td><td>[267]</td><td>Transition Metal</td><td>4</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 10 · 2</td><td>A synthetic superheavy transition metal whose chemistry resembles hafnium.</td></tr>
+<tr><th scope="row">105</th><td><a href="#Db">Db</a></td><td>Dubnium</td><td>[268]</td><td>Transition Metal</td><td>5</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 11 · 2</td><td>A synthetic superheavy element studied through a few rapidly decaying atoms.</td></tr>
+<tr><th scope="row">106</th><td><a href="#Sg">Sg</a></td><td>Seaborgium</td><td>[269]</td><td>Transition Metal</td><td>6</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 12 · 2</td><td>A synthetic element named for Glenn Seaborg with chemistry similar to tungsten.</td></tr>
+<tr><th scope="row">107</th><td><a href="#Bh">Bh</a></td><td>Bohrium</td><td>[270]</td><td>Transition Metal</td><td>7</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 13 · 2</td><td>A short-lived synthetic transition element named for physicist Niels Bohr.</td></tr>
+<tr><th scope="row">108</th><td><a href="#Hs">Hs</a></td><td>Hassium</td><td>[277]</td><td>Transition Metal</td><td>8</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 14 · 2</td><td>A synthetic superheavy metal expected to share chemistry with osmium.</td></tr>
+<tr><th scope="row">109</th><td><a href="#Mt">Mt</a></td><td>Meitnerium</td><td>[278]</td><td>Transition Metal</td><td>9</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 15 · 2</td><td>An extremely short-lived synthetic element named for physicist Lise Meitner.</td></tr>
+<tr><th scope="row">110</th><td><a href="#Ds">Ds</a></td><td>Darmstadtium</td><td>[281]</td><td>Transition Metal</td><td>10</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 17 · 1</td><td>A synthetic superheavy element first produced in Darmstadt, Germany.</td></tr>
+<tr><th scope="row">111</th><td><a href="#Rg">Rg</a></td><td>Roentgenium</td><td>[282]</td><td>Transition Metal</td><td>11</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 1</td><td>A synthetic element predicted to be a dense noble metal related to gold.</td></tr>
+<tr><th scope="row">112</th><td><a href="#Cn">Cn</a></td><td>Copernicium</td><td>[285]</td><td>Transition Metal</td><td>12</td><td>7</td><td>d-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 2</td><td>A volatile synthetic superheavy element named for astronomer Nicolaus Copernicus.</td></tr>
+<tr><th scope="row">113</th><td><a href="#Nh">Nh</a></td><td>Nihonium</td><td>[286]</td><td>Post-Transition Metal</td><td>13</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 3</td><td>The first element discovered in Asia, nihonium is synthetic and highly unstable.</td></tr>
+<tr><th scope="row">114</th><td><a href="#Fl">Fl</a></td><td>Flerovium</td><td>[289]</td><td>Post-Transition Metal</td><td>14</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 4</td><td>A synthetic superheavy element with unusual predicted metallic and volatile behavior.</td></tr>
+<tr><th scope="row">115</th><td><a href="#Mc">Mc</a></td><td>Moscovium</td><td>[290]</td><td>Post-Transition Metal</td><td>15</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 5</td><td>A synthetic, rapidly decaying element named for the Moscow region.</td></tr>
+<tr><th scope="row">116</th><td><a href="#Lv">Lv</a></td><td>Livermorium</td><td>[293]</td><td>Post-Transition Metal</td><td>16</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 6</td><td>A synthetic superheavy element named for Lawrence Livermore National Laboratory.</td></tr>
+<tr><th scope="row">117</th><td><a href="#Ts">Ts</a></td><td>Tennessine</td><td>[294]</td><td>Halogen</td><td>17</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 7</td><td>A synthetic superheavy halogen whose chemistry may differ from lighter halogens.</td></tr>
+<tr><th scope="row">118</th><td><a href="#Og">Og</a></td><td>Oganesson</td><td>[294]</td><td>Noble Gas</td><td>18</td><td>7</td><td>p-block</td><td>2 · 8 · 18 · 32 · 32 · 18 · 8</td><td>The heaviest confirmed element is an unstable noble-gas relative with predicted reactivity.</td></tr>
+</tbody></table></div>
+<h2>About the data</h2>
+<p>Atomic masses follow the abridged standard atomic weights published by IUPAC. A bracketed value is the mass number of the longest-lived known isotope. Electron shells show ground-state arrangements by principal shell. Lanthanides (La to Lu) and actinides (Ac to Lr) are grouped in the f-block following common convention, although the placement of lutetium and lawrencium is still discussed. The "no stable isotope" flag applies to technetium, promethium and every element from polonium (84) upward.</p>
+</main>
+<footer>Elementum 3D · interactive periodic table · rendered with three.js</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js" integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" integrity="sha384-wagZhIFgY4hD+7awjQjR4e2E294y6J2HSnd8eTNc15ZubTeQeVRZwhQJ+W6hnBsf" crossorigin="anonymous"></script>
 <script>
 (()=>{"use strict";
+const baseTitle=document.title;
 const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const C={RN:"Reactive Nonmetal",NG:"Noble Gas",AM:"Alkali Metal",AE:"Alkaline Earth Metal",ML:"Metalloid",HA:"Halogen",TM:"Transition Metal",PM:"Post-Transition Metal",LA:"Lanthanide",AC:"Actinide"};
-const COLORS={[C.RN]:"#00f2fe",[C.NG]:"#d8b4fe",[C.AM]:"#ff4b4b",[C.AE]:"#fbbf24",[C.ML]:"#34d399",[C.HA]:"#a7f3d0",[C.TM]:"#60a5fa",[C.PM]:"#2dd4bf",[C.LA]:"#f472b6",[C.AC]:"#c084fc"};
+const COLORS={[C.RN]:"#86cfa3",[C.NG]:"#b9a5f0",[C.AM]:"#f28b74",[C.AE]:"#f4c25b",[C.ML]:"#c3d36a",[C.HA]:"#6fcfd0",[C.TM]:"#86aee6",[C.PM]:"#cdbb9a",[C.LA]:"#f2a3bf",[C.AC]:"#d58ac6"};
+const SANS='"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',MONO='ui-monospace,"SF Mono",Menlo,Consolas,monospace';
+const blockOf=e=>e.period>7?"f-block":e.group<=2||e.number===2?"s-block":e.group>=13?"p-block":"d-block";
+const stableOf=e=>e.number===43||e.number===61||e.number>=84?"No stable isotope":"Has stable isotope";
+const MODES={category:{key:e=>e.category,colors:COLORS},
+block:{key:blockOf,colors:{"s-block":"#f28b74","p-block":"#6fcfd0","d-block":"#86aee6","f-block":"#f4c25b"}},
+stability:{key:stableOf,colors:{"Has stable isotope":"#86cfa3","No stable isotope":"#f28b74"}}};
+let mode="category";const keyOf=e=>MODES[mode].key(e),colorOf=e=>MODES[mode].colors[keyOf(e)];
 const E=(number,symbol,name,mass,category,period,group,shells,summary)=>({number,symbol,name,mass,category,period,group,shells,summary});
 const ELEMENTS=[
 E(1,"H","Hydrogen","1.008",C.RN,1,1,[1],"The lightest element, hydrogen fuels stars and forms most visible matter in the universe."),E(2,"He","Helium","4.0026",C.NG,1,18,[2],"An inert, low-density gas produced by stellar fusion and used in cryogenics."),
@@ -131,8 +348,10 @@ const mount=document.getElementById("scene"),hud=document.getElementById("hud"),
 const mobile=innerWidth<760;
 const renderer=new THREE.WebGLRenderer({antialias:!mobile,powerPreference:"high-performance"});
 const pixelRatio=()=>Math.min(devicePixelRatio||1,mobile?3:still?1.5:2.5);
-renderer.setPixelRatio(pixelRatio());renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x080a10);
+renderer.setPixelRatio(pixelRatio());renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x14110e);
 renderer.outputEncoding=THREE.sRGBEncoding;mount.appendChild(renderer.domElement);
+renderer.domElement.addEventListener("webglcontextlost",e=>e.preventDefault());
+renderer.domElement.addEventListener("webglcontextrestored",()=>{cards.forEach(c=>c.userData.S=0);planLOD()});
 const maxAniso=Math.min(8,renderer.capabilities.getMaxAnisotropy());
 const scene=new THREE.Scene();
 const camera=new THREE.PerspectiveCamera(43,innerWidth/innerHeight,1,9000);camera.position.set(0,0,920);
@@ -149,32 +368,23 @@ const availH=Math.max(120,innerHeight-topUI-botUI),availW=Math.max(120,innerWidt
 const d=Math.min(controls.maxDistance,Math.max(controls.minDistance,Math.max(halfH*innerHeight/(tan*availH),halfW*innerWidth/(tan*camera.aspect*availW))));
 const y=-23+((topUI-botUI)/2)*(2*d*tan/innerHeight);
 controls.target.set(0,y,0);camera.position.set(0,y,d)}
-const starN=innerWidth<680?2400:5200,sg=new THREE.BufferGeometry(),sp=new Float32Array(starN*3);
-for(let i=0;i<sp.length;i+=3){let r=700+Math.random()*2800,u=Math.random()*2-1,a=Math.random()*6.283,s=Math.sqrt(1-u*u);sp[i]=Math.cos(a)*s*r;sp[i+1]=u*r;sp[i+2]=Math.sin(a)*s*r}
-sg.setAttribute("position",new THREE.BufferAttribute(sp,3));
-const stars=new THREE.Points(sg,new THREE.PointsMaterial({color:0x8cb6d8,size:1.6,sizeAttenuation:false,transparent:true,opacity:.46,depthWrite:false}));scene.add(stars);
+
 
 const group=new THREE.Group();scene.add(group);
-const cards=[],targets={grid:[],sphere:[],helix:[],rings:[]},geo=new THREE.PlaneGeometry(46,58),glowGeo=new THREE.PlaneGeometry(49,61);
+const cards=[],targets={grid:[],sphere:[],helix:[],rings:[]},geo=new THREE.PlaneGeometry(46,58);
 
 function rr(x,px,py,pw,ph,pr){x.beginPath();x.moveTo(px+pr,py);x.arcTo(px+pw,py,px+pw,py+ph,pr);x.arcTo(px+pw,py+ph,px,py+ph,pr);x.arcTo(px,py+ph,px,py,pr);x.arcTo(px,py,px+pw,py,pr);x.closePath()}
-function texture(e,S){const w=210,h=262,r=24,c=document.createElement("canvas");c.width=w*S;c.height=h*S;
-const x=c.getContext("2d"),co=COLORS[e.category],F='"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';x.scale(S,S);
-rr(x,2,2,w-4,h-4,r);x.save();x.clip();
-const bg=x.createLinearGradient(0,0,0,h);bg.addColorStop(0,"#34415e");bg.addColorStop(.55,"#202c46");bg.addColorStop(1,"#141d31");x.fillStyle=bg;x.fillRect(0,0,w,h);
-const wash=x.createLinearGradient(0,0,w,h);wash.addColorStop(0,co+"59");wash.addColorStop(1,co+"00");x.fillStyle=wash;x.fillRect(0,0,w,h);
-const sheen=x.createLinearGradient(0,0,0,h*.55);sheen.addColorStop(0,"#ffffff40");sheen.addColorStop(1,"#ffffff00");x.fillStyle=sheen;x.fillRect(0,0,w,h*.55);
-x.restore();
-rr(x,2,2,w-4,h-4,r);x.lineWidth=2.5;x.strokeStyle=co;x.stroke();
-rr(x,5,5,w-10,h-10,r-3);x.lineWidth=1;x.strokeStyle="#ffffff3a";x.stroke();
-x.textAlign="left";x.fillStyle="#eef3fa";x.font="700 20px "+F;x.fillText(e.number,16,34);
-x.textAlign="center";x.fillStyle="#fff";x.font="800 84px "+F;x.shadowColor=co;x.shadowBlur=22*S;x.fillText(e.symbol,w/2,140);x.shadowBlur=0;
-let fs=30;x.font="700 "+fs+"px "+F;while(x.measureText(e.name).width>w-18&&fs>12){fs--;x.font="700 "+fs+"px "+F}
-x.fillStyle="#fff";x.fillText(e.name,w/2,180);
-x.font="600 19px "+F;x.fillStyle="#d5deec";x.fillText(e.mass,w/2,206);
-const label=e.category.toUpperCase();x.font="700 10px "+F;const tw=x.measureText(label).width,pw=tw+20,ph=20,px0=w/2-pw/2,py0=h-34;
-rr(x,px0,py0,pw,ph,ph/2);x.fillStyle=co+"33";x.fill();rr(x,px0,py0,pw,ph,ph/2);x.lineWidth=1;x.strokeStyle=co+"b0";x.stroke();
-x.fillStyle="#fff";x.fillText(label,w/2,py0+14);
+function texture(e,S){const w=210,h=262,c=document.createElement("canvas");c.width=w*S;c.height=h*S;
+const x=c.getContext("2d"),co=colorOf(e),ink="#17130f";x.scale(S,S);
+rr(x,3,3,w-6,h-6,14);x.fillStyle=co;x.fill();
+const sh=x.createLinearGradient(0,h*.5,0,h);sh.addColorStop(0,"#00000000");sh.addColorStop(1,"#0000002e");rr(x,3,3,w-6,h-6,14);x.fillStyle=sh;x.fill();
+rr(x,3,3,w-6,h-6,14);x.lineWidth=3;x.strokeStyle="#00000038";x.stroke();
+x.fillStyle=ink;x.textAlign="left";x.font="700 22px "+SANS;x.fillText(e.number,16,37);
+x.textAlign="right";x.globalAlpha=.7;x.font="600 17px "+MONO;x.fillText(e.period>7?"f":e.group,w-16,37);x.globalAlpha=1;
+x.textAlign="center";x.font="800 98px "+SANS;x.fillText(e.symbol,w/2,148);
+let fs=28;x.font="700 "+fs+"px "+SANS;while(x.measureText(e.name).width>w-22&&fs>12){fs--;x.font="700 "+fs+"px "+SANS}
+x.fillText(e.name,w/2,190);
+x.globalAlpha=.75;x.font="600 20px "+MONO;x.fillText(e.mass,w/2,230);x.globalAlpha=1;
 const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=maxAniso;return t}
 
 function slot(e){if(e.period===8)return[e.number-55,7];if(e.period===9)return[e.number-87,8];return[e.group-1,e.period-1]}
@@ -183,9 +393,8 @@ const periodCount={};ELEMENTS.forEach(e=>periodCount[e.period]=(periodCount[e.pe
 
 ELEMENTS.forEach((e,i)=>{
 const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({map:texture(e,baseS),transparent:true,side:THREE.DoubleSide,toneMapped:false}));
-m.userData={e,visible:true,targetOpacity:1,targetScale:1,S:baseS};
-if(!mobile){const glow=new THREE.Mesh(glowGeo,new THREE.MeshBasicMaterial({color:COLORS[e.category],transparent:true,opacity:.07,blending:THREE.AdditiveBlending,depthWrite:false,side:THREE.DoubleSide,toneMapped:false}));
-glow.position.z=-.3;m.add(glow);m.userData.glow=glow}
+m.userData={e,visible:true,targetOpacity:1,targetScale:1,S:baseS,base:new THREE.Vector3(),baseQ:new THREE.Quaternion(),o:new THREE.Vector3(),v:new THREE.Vector3(),pr:0,flip:0,flash:0,ok:false};
+
 group.add(m);cards.push(m);
 const q=slot(e);targets.grid.push({p:new THREE.Vector3((q[0]-8.5)*52,(3.65-q[1])*66,0),q:new THREE.Quaternion()});
 let phi=Math.acos(-1+2*(i+.5)/118),theta=Math.sqrt(118*Math.PI)*phi,p=new THREE.Vector3(390*Math.cos(theta)*Math.sin(phi),390*Math.sin(theta)*Math.sin(phi),390*Math.cos(phi)),o=new THREE.Object3D();
@@ -197,20 +406,22 @@ targets.rings.push({p:rp,q:new THREE.Quaternion()});
 });
 
 let layout="grid",moving=false,start=0,duration=950,visible=cards.slice(),hover=null,query="",category="All";
-const ease=t=>1-Math.pow(1-t,4),WHITE=new THREE.Color(1,1,1),HOT=new THREE.Color(1.45,1.35,1.05);
+const ease=t=>1-Math.pow(1-t,4),WHITE=new THREE.Color(1,1,1),HOT=new THREE.Color(1.18,1.14,1.05);
 
-function setLayout(n,instant=false){layout=n;interacted=false;document.querySelectorAll("[data-layout]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.layout===n));
+function setLayout(n,instant=false){layout=n;interacted=false;group.rotation.set(0,0,0);document.querySelectorAll("[data-layout]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.layout===n));
 start=performance.now();duration=instant||still?1:950;moving=true;
-cards.forEach((m,i)=>{m.userData.fp=m.position.clone();m.userData.fq=m.quaternion.clone();m.userData.tp=targets[n][i].p;m.userData.tq=targets[n][i].q});
+cards.forEach((m,i)=>{m.userData.fp=m.userData.base.clone();m.userData.fq=m.userData.baseQ.clone();m.userData.tp=targets[n][i].p;m.userData.tq=targets[n][i].q});
 controls.target.set(0,0,0);setInteraction(n);
 if(n==="grid")fitGrid();else if(!instant)camera.position.set(0,0,n==="sphere"?1050:n==="helix"?980:1000)}
 
-const filters=document.getElementById("filters");
-["All",...Object.values(C)].forEach((cat,i)=>{const b=document.createElement("button");b.className="chip";b.textContent=cat;b.setAttribute("aria-pressed",i===0);
-b.style.setProperty("--c",i?COLORS[cat]:"#e2e8f0");b.onclick=()=>{category=cat;filters.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));filter()};filters.appendChild(b)});
+const chipBox=document.getElementById("chips"),modeBtns=document.querySelectorAll("[data-mode]");
+function buildChips(){chipBox.textContent="";["All",...Object.keys(MODES[mode].colors)].forEach((cat,i)=>{const b=document.createElement("button");b.className="chip";b.textContent=cat;b.setAttribute("aria-pressed",i===0);
+b.style.setProperty("--c",i?MODES[mode].colors[cat]:"#efe8da");b.onclick=()=>{category=cat;chipBox.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));filter()};chipBox.appendChild(b)})}
+function setMode(m){mode=m;category="All";modeBtns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.mode===m));buildChips();cards.forEach(c=>c.userData.S=0);filter();planLOD()}
+modeBtns.forEach(b=>b.onclick=()=>setMode(b.dataset.mode));buildChips();
 
 function filter(){const q=query.trim().toLowerCase();visible=[];
-cards.forEach(m=>{const e=m.userData.e,ok=(!q||e.name.toLowerCase().includes(q)||e.symbol.toLowerCase().includes(q)||String(e.number)===q)&&(category==="All"||e.category===category);
+cards.forEach(m=>{const e=m.userData.e,ok=(!q||e.name.toLowerCase().includes(q)||e.symbol.toLowerCase().includes(q)||String(e.number)===q)&&(category==="All"||keyOf(e)===category);
 m.userData.visible=ok;m.userData.targetOpacity=ok?1:.025;m.userData.targetScale=ok?1:.72;if(ok)visible.push(m)});
 document.getElementById("count").textContent=`${visible.length} element${visible.length===1?"":"s"} visible`;
 document.getElementById("empty").style.display=visible.length?"none":"block"}
@@ -228,14 +439,14 @@ function pick(cx,cy){const r=renderer.domElement.getBoundingClientRect(),v=new T
 ray.setFromCamera(v,camera);const h=ray.intersectObjects(visible,false);return h.length?h[0].object:null}
 let downPt=null;
 renderer.domElement.addEventListener("pointerdown",e=>{downPt={x:e.clientX,y:e.clientY,t:performance.now()}});
-renderer.domElement.addEventListener("pointermove",e=>{if(e.pointerType==="mouse"&&!downPt)hover=pick(e.clientX,e.clientY)});
-renderer.domElement.addEventListener("pointerleave",()=>{hover=null});
+renderer.domElement.addEventListener("pointermove",e=>{const r=renderer.domElement.getBoundingClientRect();ptr.x=(e.clientX-r.left)/r.width*2-1;ptr.y=-(e.clientY-r.top)/r.height*2+1;ptr.on=true;px=e.clientX;py=e.clientY;if(e.pointerType==="mouse"&&!downPt)hoverDirty=true});
+renderer.domElement.addEventListener("pointerleave",()=>{hover=null;ptr.on=false});
 renderer.domElement.addEventListener("pointercancel",()=>{downPt=null});
-renderer.domElement.addEventListener("pointerup",e=>{if(!downPt)return;const d=Math.hypot(e.clientX-downPt.x,e.clientY-downPt.y),dt=performance.now()-downPt.t;downPt=null;
-if(d<8&&dt<600){const m=pick(e.clientX,e.clientY);if(m)openElement(m.userData.e)}});
-renderer.domElement.addEventListener("dblclick",()=>setLayout(layout));
+renderer.domElement.addEventListener("pointerup",e=>{if(e.pointerType!=="mouse")ptr.on=false;if(!downPt)return;const d=Math.hypot(e.clientX-downPt.x,e.clientY-downPt.y),dt=performance.now()-downPt.t;downPt=null;
+if(d<8&&dt<600){const m=pick(e.clientX,e.clientY);if(m)activate(m);else if(!game.on)burst(350)}});
+renderer.domElement.addEventListener("dblclick",e=>{if(!pick(e.clientX,e.clientY))setLayout(layout)});
 
-let ar=null,as=null,ac=null,actrl=null,ag=null,electrons=[],raf=0,selected=null,atomAuto=!still,focus=false;
+let ar=null,as=null,ac=null,actrl=null,ag=null,electrons=[],raf=0,selected=null,atomAuto=!still,focus=false,excite=0;
 const camZ=e=>Math.max(25,e.shells.length*7.2);
 
 function glowTex(){const c=document.createElement("canvas");c.width=c.height=64;let x=c.getContext("2d"),g=x.createRadialGradient(32,32,0,32,32,32);
@@ -243,25 +454,27 @@ g.addColorStop(0,"#fff");g.addColorStop(.2,"#fffffff0");g.addColorStop(.55,"#fff
 
 function ensureAtom(){if(ar)return;
 ar=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:"low-power"});ar.setPixelRatio(Math.min(devicePixelRatio||1,1.6));ar.setClearColor(0x000000,0);ar.outputEncoding=THREE.sRGBEncoding;host.appendChild(ar.domElement);
+ar.domElement.addEventListener("webglcontextlost",e=>e.preventDefault());
+ar.domElement.addEventListener("webglcontextrestored",()=>{if(selected&&modal.classList.contains("open"))buildAtom(selected)});
 ac=new THREE.PerspectiveCamera(45,1,.1,500);
 actrl=new THREE.OrbitControls(ac,ar.domElement);actrl.enableDamping=true;actrl.dampingFactor=.08;actrl.minDistance=8;actrl.maxDistance=90;actrl.autoRotateSpeed=.8}
 
-function disposeScene(s){if(!s)return;s.traverse(o=>{if(o.geometry)o.geometry.dispose();const m=o.material;if(m)(Array.isArray(m)?m:[m]).forEach(x=>{if(x.map)x.map.dispose();x.dispose()})})}
+function disposeScene(s){if(!s)return;s.traverse(o=>{if(o.geometry&&!o.isSprite)o.geometry.dispose();const m=o.material;if(m)(Array.isArray(m)?m:[m]).forEach(x=>{if(x.map)x.map.dispose();x.dispose()})})}
 
-function openElement(e){selected=e;hover=null;let co=COLORS[e.category],d=document.getElementById("details"),set=(id,value)=>document.getElementById(id).textContent=value;
+function openElement(e){selected=e;hover=null;let co=colorOf(e),d=document.getElementById("details"),set=(id,value)=>document.getElementById(id).textContent=value;
 d.style.setProperty("--ec",co);set("dno","Atomic number "+e.number);set("dsym",e.symbol);set("dname",e.name);set("dcat",e.category);set("dsum",e.summary);
-set("dmass",e.mass+" u");set("dgroup",e.period>7?"—":e.group);set("dperiod",e.period===8?"6 · Lanthanide":e.period===9?"7 · Actinide":e.period);set("delec",e.number);
-document.getElementById("shells").innerHTML=e.shells.map((n,i)=>`<span class="shell">${"KLMNOPQ"[i]} · ${n}</span>`).join("");
-modal.classList.add("open");buildAtom(e);setTimeout(resizeAtom,20);history.replaceState(null,"","#"+e.symbol)}
+set("dmass",e.mass+" u");set("dgroup",e.period>7?"—":e.group);set("dperiod",e.period===8?"6 · Lanthanide":e.period===9?"7 · Actinide":e.period);set("delec",e.number);set("dblock",blockOf(e));set("dstab",stableOf(e));document.title=e.name+" ("+e.symbol+"): element "+e.number+" | Elementum 3D";
+const sh=document.getElementById("shells");sh.textContent="";e.shells.forEach((n,i)=>{const b=document.createElement("span");b.className="shell";b.textContent="KLMNOPQ"[i]+" · "+n;sh.appendChild(b)});
+modal.classList.add("open");document.documentElement.classList.add("lock");buildAtom(e);setTimeout(resizeAtom,20);history.replaceState(null,"","#"+e.symbol)}
 
-function closeModal(){modal.classList.remove("open");cancelAnimationFrame(raf);raf=0;disposeScene(as);as=null;ag=null;electrons=[];history.replaceState(null,"",location.pathname+location.search)}
+function closeModal(){modal.classList.remove("open");document.documentElement.classList.remove("lock");document.title=baseTitle;cancelAnimationFrame(raf);raf=0;disposeScene(as);as=null;ag=null;electrons=[];history.replaceState(null,"",location.pathname+location.search)}
 document.getElementById("close").onclick=closeModal;modal.addEventListener("pointerdown",e=>{if(e.target===modal)closeModal()});
 function stepElement(d){const L=visible.length?visible.map(m=>m.userData.e):ELEMENTS;let i=L.indexOf(selected);i=i<0?0:(i+d+L.length)%L.length;openElement(L[i])}
 document.getElementById("pv").onclick=()=>stepElement(-1);document.getElementById("nx").onclick=()=>stepElement(1);
 
 function buildAtom(e){ensureAtom();cancelAnimationFrame(raf);disposeScene(as);
 as=new THREE.Scene();ac.position.set(0,8,camZ(e));actrl.target.set(0,0,0);actrl.autoRotate=atomAuto;focus=false;document.getElementById("azoom").setAttribute("aria-pressed",false);
-as.add(new THREE.AmbientLight(0x99b8d8,.7));let co=new THREE.Color(COLORS[e.category]),pl=new THREE.PointLight(co,2.8,80);as.add(pl);
+as.add(new THREE.AmbientLight(0x99b8d8,.7));let co=new THREE.Color(colorOf(e)),pl=new THREE.PointLight(co,2.8,80);as.add(pl);
 let dl=new THREE.DirectionalLight(0xffffff,1.1);dl.position.set(8,12,15);as.add(dl);
 ag=new THREE.Group();as.add(ag);electrons=[];
 let n=new THREE.Mesh(new THREE.SphereGeometry(2.2,24,18),new THREE.MeshStandardMaterial({color:co,emissive:co,emissiveIntensity:.8,metalness:.55,roughness:.25}));ag.add(n);
@@ -274,8 +487,8 @@ gl.scale.set(1.1,1.1,1);dot.add(gl);s.add(dot);electrons.push({m:dot,r,a:j/count
 resizeAtom();actrl.update();atomLoop()}
 
 function atomLoop(){raf=requestAnimationFrame(atomLoop);if(document.hidden||!ar||!ag)return;let t=performance.now()*.001;
-electrons.forEach(e=>{e.a+=(still?0:.028)*e.v;e.m.position.set(Math.cos(e.a)*e.r,0,Math.sin(e.a)*e.r)});
-ag.rotation.y=still?0:Math.sin(t*.25)*.1;ag.children[1].scale.setScalar(9+(still?0:Math.sin(t*2)*.4));
+electrons.forEach(e=>{e.a+=(still?0:.028)*e.v*(1+excite*7);e.m.position.set(Math.cos(e.a)*e.r,0,Math.sin(e.a)*e.r)});
+ag.rotation.y=still?0:Math.sin(t*.25)*.1;ag.children[1].scale.setScalar(9+(still?0:Math.sin(t*2)*.4)+excite*6);excite*=.965;
 if(azp){const s=azp*.2;azp=Math.abs(azp)<.002?0:azp-s;dolly(ac,actrl,Math.exp(-s))}
 actrl.update();ar.render(as,ac)}
 function resizeAtom(){if(!ar)return;let w=host.clientWidth||500,h=host.clientHeight||500;ar.setSize(w,h,false);ac.aspect=w/h;ac.updateProjectionMatrix()}
@@ -284,6 +497,9 @@ document.getElementById("aauto").onclick=e=>{atomAuto=!atomAuto;if(actrl)actrl.a
 document.getElementById("areset").onclick=()=>{if(!selected||!ac)return;ac.position.set(0,8,camZ(selected));actrl.target.set(0,0,0);focus=false;document.getElementById("azoom").setAttribute("aria-pressed",false)};
 document.getElementById("azoom").onclick=e=>{if(!selected||!ac)return;focus=!focus;ac.position.set(focus?8:0,focus?4:8,focus?10:camZ(selected));actrl.target.set(0,0,0);e.currentTarget.setAttribute("aria-pressed",focus)};
 
+document.getElementById("aexcite").onclick=()=>{excite=1};
+let atomDown=null;host.addEventListener("pointerdown",e=>{atomDown=[e.clientX,e.clientY]});
+host.addEventListener("pointerup",e=>{if(atomDown&&Math.hypot(e.clientX-atomDown[0],e.clientY-atomDown[1])<6)excite=1;atomDown=null});
 let lastW=innerWidth;
 function resize(){camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setPixelRatio(pixelRatio());renderer.setSize(innerWidth,innerHeight);
 if(layout==="grid"&&innerWidth!==lastW)fitGrid();lastW=innerWidth;resizeAtom();scheduleLOD()}
@@ -311,15 +527,17 @@ document.getElementById("zout").onclick=()=>{zp-=.45;interacted=true};
 addEventListener("keydown",e=>{shiftDown=e.shiftKey;
 const typing=/INPUT|TEXTAREA/.test(document.activeElement.tagName),open=modal.classList.contains("open");
 if(e.key==="Escape"&&open){closeModal();return}
+if(e.key==="Escape"&&game.on){togglePlay();return}
 if(e.key==="/"&&!typing){e.preventDefault();searchEl.focus();return}
 if(typing||e.ctrlKey||e.metaKey||e.altKey)return;
+if(!open&&scrollY>innerHeight*.5)return;
 const z=zoomDir(e);
 if(z){e.preventDefault();if(open)azp+=z*.22;else zp+=z*.22;return}
 if(open){if(e.key==="ArrowLeft")stepElement(-1);else if(e.key==="ArrowRight")stepElement(1);return}
 if(e.key.startsWith("Arrow")){e.preventDefault();keys.add(e.key);return}
 const k=e.key.toLowerCase();
 if(k==="g")setLayout("grid");else if(k==="s")setLayout("sphere");else if(k==="h")setLayout("helix");else if(k==="r")setLayout("rings");
-else if(k==="0"||k==="home")setLayout(layout);else if(k==="a")document.getElementById("auto").click()});
+else if(k==="0"||k==="home")setLayout(layout);else if(k==="a")document.getElementById("auto").click();else if(k==="b")burst(1100);else if(k==="p")togglePlay()});
 addEventListener("keyup",e=>{shiftDown=e.shiftKey;keys.delete(e.key)});
 addEventListener("blur",()=>{keys.clear();shiftDown=false});
 
@@ -336,23 +554,57 @@ const w=wantedScale();lodQueue=[];
 cards.forEach(m=>{const s=frustum.intersectsObject(m)?w:baseS;if(m.userData.S!==s)lodQueue.push([m,s])})}
 function runLOD(){let n=0;while(lodQueue.length&&n<6){const q=lodQueue.shift(),m=q[0],s=q[1];if(m.userData.S===s)continue;
 const old=m.material.map;m.material.map=texture(m.userData.e,s);if(old)old.dispose();m.userData.S=s;n++}}
-function animate(now){requestAnimationFrame(animate);if(document.hidden||modal.classList.contains("open"))return;
-if(moving){let t=Math.min(1,(now-start)/duration),k=ease(Math.max(0,t));
-cards.forEach(m=>{m.position.lerpVectors(m.userData.fp,m.userData.tp,k);m.quaternion.slerpQuaternions(m.userData.fq,m.userData.tq,k)});if(t===1)moving=false}
-cards.forEach(m=>{let u=m.userData;
+const _b=new THREE.Vector3(),_c=new THREE.Vector3(),_p=new THREE.Vector3(),_d=new THREE.Vector3(),_q=new THREE.Quaternion(),_t=new THREE.Quaternion(),_e=new THREE.Euler();
+const ptr={x:9,y:9,on:false},GOOD=new THREE.Color(.6,1.3,.75),BAD=new THREE.Color(1.5,.55,.5);
+let tPrev=performance.now(),hoverDirty=false,px=0,py=0,opening=0;
+function burst(power){if(still)return;cards.forEach(m=>{_d.set(Math.random()-.5,Math.random()-.5,Math.random()*.8+.2).normalize().multiplyScalar(power*(.5+Math.random()));m.userData.v.add(_d)})}
+function shock(m,power){if(still)return;cards.forEach(n=>{if(n===m)return;_d.copy(n.position).sub(m.position);const l=_d.length();if(l<260){const f=1-l/260;_d.normalize().multiplyScalar(power*f);_d.z+=power*.5*f;n.userData.v.add(_d)}})}
+const gameEl=document.getElementById("game"),gq=document.getElementById("gq"),gs=document.getElementById("gs"),playBtn=document.getElementById("play"),game={on:false,t:null,q:"",score:0,streak:0,best:0,miss:0};
+function score(){gs.textContent="Score "+game.score+" · Streak "+game.streak+" · Best "+game.best}
+function ask(){const pool=visible.length?visible:cards,e=pool[Math.random()*pool.length|0].userData.e,k=Math.random()*(e.period>7?3:4)|0;game.t=e;game.miss=0;
+game.q=k===0?"Find "+e.name:k===1?"Find the element with symbol "+e.symbol:k===2?"Find the element with atomic number "+e.number:"Find the element in group "+e.group+", period "+e.period;gq.textContent=game.q;score()}
+function answer(m){const u=m.userData,e=u.e;
+if(e===game.t){game.streak++;game.best=Math.max(game.best,game.streak);game.score+=(game.miss?5:10)+Math.min(game.streak,5);u.flash=.8;u.ok=true;u.flip=still?0:1;shock(m,380);gq.textContent="Correct, that is "+e.name+".";score();setTimeout(()=>{if(game.on)ask()},900)}
+else{game.miss++;game.streak=0;u.flash=.5;u.ok=false;if(!still){u.v.z+=300;u.v.x+=(Math.random()-.5)*600}gq.textContent="Not quite, that was "+e.name+". "+game.q;score();
+if(game.miss>=2){const t=cards.find(c=>c.userData.e===game.t);t.userData.flash=1.2;t.userData.ok=true}}}
+function togglePlay(){game.on=!game.on;gameEl.hidden=!game.on;playBtn.setAttribute("aria-pressed",game.on);if(game.on){game.score=game.streak=0;if(modal.classList.contains("open"))closeModal();ask()}if(layout==="grid")fitGrid()}
+playBtn.onclick=togglePlay;document.getElementById("gquit").onclick=togglePlay;document.getElementById("burst").onclick=()=>burst(1100);
+function activate(m){if(game.on){answer(m);return}const u=m.userData;if(opening)return;
+if(still){openElement(u.e);return}u.flip=1;shock(m,200);opening=setTimeout(()=>{opening=0;openElement(u.e)},320)}
+function animate(now){requestAnimationFrame(animate);
+if(document.hidden||modal.classList.contains("open")){tPrev=now;return}
+const dt=Math.min(.05,Math.max(0,(now-tPrev)/1000));tPrev=now;
+let k=1;if(moving){const t=Math.min(1,(now-start)/duration);k=ease(Math.max(0,t));if(t===1)moving=false}
+if(layout!=="grid"&&!still&&!downPt)group.rotation.y+=dt*.1;
+group.updateMatrixWorld(true);
+if(hoverDirty){hoverDirty=false;hover=pick(px,py)}
+_c.copy(camera.position);group.worldToLocal(_c);
+cards.forEach(m=>{const u=m.userData;
+_b.lerpVectors(u.fp,u.tp,k);u.base.copy(_b);_q.slerpQuaternions(u.fq,u.tq,k);u.baseQ.copy(_q);
+_p.copy(_b).applyMatrix4(group.matrixWorld).project(camera);
+const dx=_p.x-ptr.x,dy=_p.y-ptr.y,near=!still&&ptr.on&&u.visible&&_p.z<1?Math.exp(-((dx*camera.aspect)**2+dy*dy)/.03):0;
+u.pr+=(near-u.pr)*Math.min(1,dt*12);
+u.v.addScaledVector(u.o,-18*dt).multiplyScalar(Math.max(0,1-3.4*dt));u.o.addScaledVector(u.v,dt);
+_d.copy(_c).sub(_b).normalize().multiplyScalar(u.pr*36);
+m.position.copy(_b).add(u.o).add(_d);
+_e.set(dy*u.pr*.9,-dx*u.pr*.9+(u.flip>0?ease(1-u.flip)*Math.PI*2:0),0);
+m.quaternion.copy(_q).multiply(_t.setFromEuler(_e));
+if(u.flip>0)u.flip=Math.max(0,u.flip-dt/.6);
 m.material.opacity+=(u.targetOpacity-m.material.opacity)*.12;
-let tar=hover===m&&u.visible?1.16:u.targetScale,s=m.scale.x+(tar-m.scale.x)*.14;m.scale.setScalar(s);
-m.material.color.lerp(hover===m&&u.visible?HOT:WHITE,.15);
-if(u.glow)u.glow.material.opacity+=((hover===m?.42:(u.visible?.07:0))-u.glow.material.opacity)*.12;m.visible=m.material.opacity>.012});
+const tar=hover===m&&u.visible?1.16:u.targetScale,s=m.scale.x+(tar-m.scale.x)*.14;m.scale.setScalar(s);
+m.material.color.lerp(u.flash>0?(u.ok?GOOD:BAD):hover===m&&u.visible?HOT:WHITE,.2);
+if(u.flash>0)u.flash-=dt;
+m.visible=m.material.opacity>.012});
 renderer.domElement.style.cursor=hover?"pointer":"grab";
-if(!still)stars.rotation.y+=.00008;stepView(now);controls.update();
-const p=camera.position,sig=p.x.toFixed(1)+p.y.toFixed(1)+p.z.toFixed(1)+layout+moving;if(sig!==lastSig){lastSig=sig;scheduleLOD()}
+stepView(now);controls.update();
+const p=camera.position,sig=p.x.toFixed(1)+p.y.toFixed(1)+p.z.toFixed(1)+layout+moving+(layout==="grid"?"":group.rotation.y.toFixed(1));if(sig!==lastSig){lastSig=sig;scheduleLOD()}
 runLOD();renderer.render(scene,camera)}
 
 filter();setInteraction("grid");fitGrid();setLayout("grid",true);
 const refit=()=>{if(layout==="grid"&&!interacted)fitGrid()};
 addEventListener("load",refit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refit);
-const hash=decodeURIComponent(location.hash.slice(1)),hit=hash&&ELEMENTS.find(e=>e.symbol===hash||String(e.number)===hash);if(hit)openElement(hit);
+const fromHash=()=>{let h="";try{h=decodeURIComponent(location.hash.slice(1))}catch(_){}const hit=h&&ELEMENTS.find(e=>e.symbol===h||String(e.number)===h);if(hit)openElement(hit)};
+fromHash();addEventListener("hashchange",fromHash);
 scheduleLOD();requestAnimationFrame(animate);
 })();
 </script></body></html>
