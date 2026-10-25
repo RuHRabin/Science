@@ -1,0 +1,28 @@
+:root{--paper:#eceff3;--ink:#16212f;--mute:#586779;--rule:#a9b4c0;--physics:#2b4c9b;--chemistry:#1b7566;--math:#7d3a70}
+@media (prefers-color-scheme:dark){:root{--paper:#101722;--ink:#e6ebf1;--mute:#93a1b3;--rule:#3a4757;--physics:#8ba6ee;--chemistry:#6fd0bd;--math:#d99acb}}
+*{box-sizing:border-box}
+html{color-scheme:light dark}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 Spectral,Georgia,serif}
+.page{max-width:38rem;margin:0 auto;padding:clamp(2.5rem,8vw,5rem) 1.5rem 4rem}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--c,var(--ink));outline-offset:3px}
+.back{font-size:.95rem;color:var(--mute);text-decoration:none}
+.back:hover{text-decoration:underline}
+h1{font-weight:300;font-size:clamp(3.25rem,12vw,5.5rem);line-height:1;letter-spacing:-.02em;margin:3rem 0 1rem;color:var(--c,var(--ink))}
+.lede{color:var(--mute);margin:0 0 3.5rem;max-width:30rem}
+h2{font-size:.95rem;font-weight:400;font-style:italic;color:var(--mute);margin:0 0 1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
+ul{list-style:none;margin:0;padding:0}
+.chapter{margin:0 0 2.25rem}
+.head{display:flex;align-items:baseline;gap:.6rem;text-decoration:none;color:var(--c)}
+.title{font-size:1.9rem;font-weight:600;line-height:1.2}
+.leader{flex:1;min-width:1rem;border-bottom:2px dotted var(--rule);transform:translateY(-.35rem)}
+.count{font-size:.95rem;color:var(--mute);white-space:nowrap}
+.head:hover .title{text-decoration:underline;text-underline-offset:.25em}
+.chapter>p{margin:.25rem 0 .6rem;color:var(--mute)}
+.entries{margin:.6rem 0 0 .25rem;padding-left:1rem;border-left:3px solid var(--c)}
+.entries li{margin:.4rem 0}
+.entries p{margin:0;color:var(--mute);font-size:.95rem}
+.entries a{text-decoration-color:var(--rule);text-underline-offset:.2em}
+.entries a:hover{text-decoration-color:currentColor}
+.empty{border:1px dashed var(--rule);padding:1.25rem 1.5rem;color:var(--mute);margin:0}
+footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.9rem;color:var(--mute)}
